@@ -1,4 +1,4 @@
-## Mojo ~ 3ms
+## Mojo ~ 2.9ms
 [Mojo](https://docs.modular.com/mojo/) is a relatively newcomer to the scientific computing scene, but is quickly gaining popularity.
 
 > Mojo codeblocks display as Python since markdown does not yet support Mojo highlighting.
@@ -49,9 +49,9 @@ fn _ising_update(inout field: Tensor[data_type], n: Int, m: Int, beta: Float32) 
             total += field[Index(i % N, j % M)]
     var dE = 2 * field[Index(n, m)] * total
     if dE <= 0:
-        field[Index(n, m)] = -field[Index(n, m)]
+        field[Index(n, m)] *= -1
     elif exp(-dE * beta) > rand[data_type](1)[Index(0)]:
-        field[Index(n, m)] = -field[Index(n, m)]
+        field[Index(n, m)] *= -1
 ```
 
 Lastly, we can define the `ising_step`:
@@ -98,14 +98,14 @@ report.print("ms")
     ---------------------
     Benchmark Report (ms)
     ---------------------
-    Mean: 2.989141800246609
-    Total: 2424.194
-    Iters: 811
-    Warmup Mean: 2.5299999999999998
-    Warmup Total: 5.0599999999999996
+    Mean: 2.915081212121212
+    Total: 2404.942
+    Iters: 825
+    Warmup Mean: 2.508
+    Warmup Total: 5.016
     Warmup Iters: 2
-    Fastest Mean: 2.989141800246609
-    Slowest Mean: 2.989141800246609
+    Fastest Mean: 2.915081212121212
+    Slowest Mean: 2.915081212121212
     
 
 
