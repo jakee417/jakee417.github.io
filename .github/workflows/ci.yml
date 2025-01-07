@@ -1,17 +1,25 @@
-name: "CI"
+name: CI
+
 on:
   push:
     branches:
-      - "master"
-      - "hotfix/**"
+      - master
+      - "hotfix/*"
     paths-ignore:
       - ".github/**"
       - "!.github/workflows/ci.yml"
-      - ".gitignore"
+      - .gitignore
       - "docs/**"
-      - "README.md"
-      - "LICENSE"
+      - README.md
+      - LICENSE
   pull_request:
+    paths-ignore:
+      - ".github/**"
+      - "!.github/workflows/ci.yml"
+      - .gitignore
+      - "docs/**"
+      - README.md
+      - LICENSE
 
 jobs:
   build:
@@ -26,6 +34,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0 # for posts's lastmod
+          submodules: true
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -36,10 +45,10 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: latest
+          node-version: lts/*
 
       - name: Build Assets
         run: npm i && npm run build
 
       - name: Test Site
-        run: bash tools/test
+        run: bash tools/test.sh
