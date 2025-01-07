@@ -2,7 +2,6 @@
   // Prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "prettier.trailingComma": "none",
   // Shopify Liquid
   "files.associations": {
     "*.html": "html"
@@ -15,7 +14,7 @@
     "editor.defaultFormatter": "Shopify.theme-check-vscode"
   },
   "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
+    "editor.defaultFormatter": "mkhl.shfmt"
   },
   // Disable vscode built-in stylelint
   "css.validate": false,
@@ -48,5 +47,8 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
-  }
+  },
+  "github-actions.workflows.pinned.workflows": [
+    ".github/workflows/ci.yml"
+  ]
 }

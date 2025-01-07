@@ -17,11 +17,14 @@ package-lock.json
 
 # IDE configurations
 .idea
-.vscode
+.vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json
+!.vscode/tasks.json
 
 # Misc
 assets/.DS_Store
 assets/.DS_Store
 .DS_Store
+_sass/vendors
+assets/js/dist
