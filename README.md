@@ -1,11 +1,10 @@
 <!-- markdownlint-disable-next-line -->
-<div align="center">
+# Jake's Blog
+A space for me to blog.
 
-  # Jake's Blog
+## Updating
 
-  A space for me to blog.
-
-</div>
+Follow [here](https://github.com/cotes2020/jekyll-theme-chirpy/wiki/Upgrade-Guide#upgrade-the-fork) since this project was originally forked.
 
 ## Credits
 
