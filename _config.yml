@@ -60,7 +60,7 @@ analytics:
   google:
     id: G-D2SGF7TSKN
   goatcounter:
-    id: # fill in your GoatCounter ID
+    id: jakeeblog
   umami:
     id: # fill in your Umami ID
     domain: # fill in your Umami domain
