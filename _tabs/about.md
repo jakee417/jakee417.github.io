@@ -8,5 +8,4 @@ I enjoy technical blogging on topics including:
 - Mathematics / Statistics / Physics / Machine Learning
 - Software engineering
 - Football
-
-I am also trying to learn Chinese and practice by writing short posts (please forgive my mistakes).
+- Practicing my chinese (in Pīnyīn)
