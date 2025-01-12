@@ -4,7 +4,9 @@ icon: fas fa-info-circle
 order: 5
 ---
 
-I am a machine learning engineer that enjoys technical blogging. My interests include:
+I enjoy technical blogging on topics including:
 - Mathematics / Statistics / Physics / Machine Learning
 - Software engineering
 - Football
+
+I am also trying to learn Chinese and practice by writing short posts (please forgive my mistakes).
