@@ -93,22 +93,7 @@ In this [demo notebook](https://github.com/jakee417/mcts/blob/main/mcts.ipynb), 
 
 {% include markdown/mcts.md %}
 
-<html lang="en">
-    <body>
-        <iframe iframe id="responsiveIframe" src="/assets/html/web_graph.html" height="600px" width="100%" style="border:none;"></iframe>
-        <script>
-            function isMobileDevice() {
-                return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-            }
-            const iframe = document.getElementById('responsiveIframe');
-            if (isMobileDevice()) {
-                iframe.src = "/assets/html/mobile_graph.html"
-                iframe.height = "300px"
-                window.screen.height;
-            }
-        </script>
-    </body>
-</html>
+<iframe src="/assets/html/graph.html" height="300px" width="100%" style="border:none;"></iframe>
 
 ## Conclusion
 MCTS is a tree search algorithm that is capable of searching large action spaces. It uses a select-expand-simulate-backpropagate pattern which is highly customizable for different use cases. As LLM performance improves with time, MCTS can always be used at inference time to build a diverse set of generations that mimic human reasoning.
