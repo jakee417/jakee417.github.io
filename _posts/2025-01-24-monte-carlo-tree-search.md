@@ -22,7 +22,7 @@ A post on how to combine an LLM with the [Monte Carlo Tree Search](https://en.wi
 First, I outline appendix D.1 PG-TD from [Planning with Large Language Models for Code Generation](https://arxiv.org/abs/2303.05510) which covers the adapted MCTS algorithm.
 
 ### Select
-- Starting from the root node, recursively select subtrees until finding a node that has not previously been expanded.
+- Starting from the root node, recursively select subtrees until finding a node that has not previously been expanded (for the first step where we only have the root node, the selection step is effectively skipped).
 - Each node maintains a cache $Q(s, a)$ which is the maximum reward (could also be the average reward) obtained by starting from a state $s$ and taking action $a$.
 - Selection is defined as:
 
@@ -46,10 +46,10 @@ And finally $c$ is a constant that encourages exploration.
 
 ### Expansion
 - Once at the selected node, add children to this node with a set of candidate actions.
-- The top-k candidate actions are sampled from the transformer based upon: 
+- The top-k candidate actions are taken from the conditional distribution produced by the transformer: 
 
 $$
-\{a\}_{i=1}^k \sim P_{\text{transformer}}(a | s)
+\{a\}_{i=1}^k = \max_{1:k} P_{\text{transformer}}(a | s)
 $$
 
 - In the case of token-level MCTS, we only sample the top-k tokens conditioned on the selected node's state.
@@ -80,7 +80,7 @@ This may vary depending on the LLM's generation API, but the above is compatible
 - Compute a reward using the completed evaluation. This can either be a deterministic scoring (compiler passes, math proof is correct) or a score from an LLM judge.
 
 ### Backpropagation
-- Computed reward is backpropagated back to the root node using the update:
+- Computed reward is backpropagated recursively back to the root node using the update:
 
 $$
 Q(\tilde s, \tilde a) \leftarrow \max(Q(\tilde s, \tilde a), r)
@@ -88,7 +88,7 @@ $$
 
 Each iteration leaves the algorithm in the state where $Q(\tilde s, \tilde a)$ represents the best possible reward achievable from state $s$ taking action $a$.
 
-## Translation Example (Chinese -> English)
+## Translation Example
 In this [demo notebook](https://github.com/jakee417/mcts/blob/main/mcts.ipynb), I show how MCTS can be used to improve translation from Chinese text to English:
 
 {% include markdown/mcts.md %}
