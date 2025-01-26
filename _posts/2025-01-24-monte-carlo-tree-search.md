@@ -15,7 +15,7 @@ A post on how to combine an LLM with the [Monte Carlo Tree Search](https://en.wi
 - Allow step-level expansions instead of just token-level (for more discussion on token vs. step level, see section 3 of this [paper](https://arxiv.org/pdf/2412.14135)).
 - Pass generic callable's for the candidate generation, simulation, and reward.
 
-> Code is available [here](https://github.com/jakee417/mcts).
+> Code is available [here](https://github.com/jakee417/mcts) which is heavily inspired from this excellent [blog post](https://arunpatro.github.io/blog/mcts/).
 {: .prompt-info }
 
 ## MCTS
@@ -83,7 +83,7 @@ This may vary depending on the LLM's generation API, but the above is compatible
 - Computed reward is backpropagated back to the root node using the update:
 
 $$
-Q(\tilde s, \tilde a) \leftarrow max(Q(\tilde s, \tilde a), r)
+Q(\tilde s, \tilde a) \leftarrow \max(Q(\tilde s, \tilde a), r)
 $$
 
 Each iteration leaves the algorithm in the state where $Q(\tilde s, \tilde a)$ represents the best possible reward achievable from state $s$ taking action $a$.
