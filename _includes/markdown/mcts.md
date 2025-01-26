@@ -155,6 +155,8 @@ display(
 
 ```python
 # Visualize the trees with pyvis.
-create_graph_html(root=root, filename="web_graph.html", height="600px")
-create_graph_html(root=root, filename="mobile_graph.html", height="300px")
+create_graph_html(root=root, filename="graph.html", height="300px")
 ```
+
+    graph.html
+
