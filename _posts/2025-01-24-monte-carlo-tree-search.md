@@ -22,7 +22,7 @@ A post on how to combine an LLM with the [Monte Carlo Tree Search](https://en.wi
 First, I outline appendix D.1 PG-TD from [Planning with Large Language Models for Code Generation](https://arxiv.org/abs/2303.05510) which covers the adapted MCTS algorithm.
 
 ### Select
-- Starting from the root node, recursively select subtrees until finding a node that has not previously been expanded (for the first step where we only have the root node, the selection step is effectively skipped).
+- Starting from the root node (initialized as an empty string: "" or a prompt: "The dog ran"), recursively select subtrees until finding a node that has not previously been expanded.
 - Each node maintains a cache $Q(s, a)$ which is the maximum reward (could also be the average reward) obtained by starting from a state $s$ and taking action $a$.
 - Selection is defined as:
 
