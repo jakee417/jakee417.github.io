@@ -4,9 +4,12 @@
   icon: "fab fa-github"
 
 - type: linkedin
-  icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
-  url:  'https://www.linkedin.com/in/jake-taylor-083bb231/'                  # Fill with your Linkedin homepage
+  icon: "fab fa-linkedin" # icons powered by <https://fontawesome.com/>
+  url: "https://www.linkedin.com/in/jake-taylor-083bb231/" # Fill with your Linkedin homepage
 
+- type: threads
+  icon: "fa-brands fa-threads"
+  url: "https://www.threads.net/@jaketaylor898"
 # - type: twitter
 #   icon: "fa-brands fa-x-twitter"
 
@@ -33,10 +36,7 @@
 #   icon: 'fa-brands fa-bluesky'
 #   url: ''                   # Fill with your Bluesky profile link
 #
-# - type: reddit
-#   icon: 'fa-brands fa-reddit'
-#   url: ''                   # Fill with your Reddit profile link
+- type: reddit
+  icon: 'fa-brands fa-reddit'
+  url: 'https://www.reddit.com/user/Scary_Ad_770/'                   # Fill with your Reddit profile link
 #
-# - type: threads
-#   icon: 'fa-brands fa-threads'
-#   url: ''                   # Fill with your Threads profile link

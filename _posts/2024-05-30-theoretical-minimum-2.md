@@ -2,7 +2,7 @@
 title: Theoretical Minimum - Special Relativity And Classical Field Theory
 author: jake
 date: 2024-05-30 12:00:00 +0800
-categories: [Physics]
+categories: [Physics, Theoretical Minimum]
 tags: [theoretical minimum]
 math: false
 mermaid: false
