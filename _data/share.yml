@@ -12,7 +12,7 @@ platforms:
 
   - type: Threads
     icon: "fa-brands fa-threads"
-    link: "https://www.threads.net/intent/post?url=URL&text=TITLE"
+    link: "https://www.threads.net/intent/post?text=TITLE%20URL"
 
   # - type: Telegram
   #   icon: "fab fa-telegram"

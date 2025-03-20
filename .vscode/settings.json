@@ -46,7 +46,7 @@
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "github-actions.workflows.pinned.workflows": [
     ".github/workflows/ci.yml"
