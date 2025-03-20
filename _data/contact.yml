@@ -13,6 +13,10 @@
 # - type: twitter
 #   icon: "fa-brands fa-x-twitter"
 
+- type: reddit
+  icon: 'fa-brands fa-reddit'
+  url: 'https://www.reddit.com/user/Scary_Ad_770/'                   # Fill with your Reddit profile link
+
 - type: email
   icon: "fas fa-envelope"
   noblank: true # open link in current tab
@@ -36,7 +40,4 @@
 #   icon: 'fa-brands fa-bluesky'
 #   url: ''                   # Fill with your Bluesky profile link
 #
-- type: reddit
-  icon: 'fa-brands fa-reddit'
-  url: 'https://www.reddit.com/user/Scary_Ad_770/'                   # Fill with your Reddit profile link
 #
