@@ -24,6 +24,9 @@ First, I outline appendix D.1 PG-TD from [Planning with Large Language Models fo
 ### Select
 - Starting from the root node (initialized as an empty string: "" or a prompt: "The dog ran"), recursively select subtrees until finding a node that has not previously been expanded.
 - Each node maintains a cache $Q(s, a)$ which is the maximum reward (could also be the average reward) obtained by starting from a state $s$ and taking action $a$.
+
+{% include embed.html link="https://github.com/jakee417/mcts/blob/main/src/node.py#L6-L27" %}
+
 - Selection is defined as:
 
 $$
@@ -43,6 +46,8 @@ $$
 $$
 
 And finally $c$ is a constant that encourages exploration.
+
+{% include embed.html link="https://github.com/jakee417/mcts/blob/main/src/mcts.py#L12-L38" %}
 
 ### Expansion
 - Once at the selected node, add children to this node with a set of candidate actions.
@@ -71,6 +76,8 @@ Expansion token 2 | very: {fast, slow, randomly}
 
 This may vary depending on the LLM's generation API, but the above is compatible for any model returning the top-k candidate tokens at each generation step.
 
+{% include embed.html link="https://github.com/jakee417/mcts/blob/main/src/mcts.py#L41-L56" %}
+
 ### Evaluation
 - Conduct a [beam search](https://en.wikipedia.org/wiki/Beam_search) starting from the selected node. This has the effect of a "simulation" where we try to complete the program, translation, or statement from the current node.
 
@@ -78,6 +85,8 @@ This may vary depending on the LLM's generation API, but the above is compatible
 {: .prompt-warning }
 
 - Compute a reward using the completed evaluation. This can either be a deterministic scoring (compiler passes, math proof is correct) or a score from an LLM judge.
+
+{% include embed.html link="https://github.com/jakee417/mcts/blob/main/src/open_ai.py#L113-L130" %}
 
 ### Backpropagation
 - Computed reward is backpropagated recursively back to the root node using the update:
@@ -87,6 +96,14 @@ Q(\tilde s, \tilde a) \leftarrow \max(Q(\tilde s, \tilde a), r)
 $$
 
 Each iteration leaves the algorithm in the state where $Q(\tilde s, \tilde a)$ represents the best possible reward achievable from state $s$ taking action $a$.
+
+
+{% include embed.html link="https://github.com/jakee417/mcts/blob/main/src/node.py#L43-L47" %}
+
+## One Step of MCTS
+Putting it all together, we arrive at one step of MCTS:
+
+{% include embed.html link="https://github.com/jakee417/mcts/blob/main/src/mcts.py#L59-L109" no_dropdown=true %}
 
 ## Translation Example
 In this [demo notebook](https://github.com/jakee417/mcts/blob/main/mcts.ipynb), I show how MCTS can be used to improve translation from Chinese text to English:
