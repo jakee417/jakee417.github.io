@@ -2,9 +2,25 @@
 ---
 
 @use 'main
-{%- if jekyll.environment == 'production' -%}
+{%- if jekyll.environment == ' production ' -%}
   .bundle
 {%- endif -%}
 ';
 
 /* append your custom style below */
+.embed-snippet {
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.embed-snippet.md {
+  border-left: 4px solid #28a745;
+}
+
+.embed-snippet.ipynb {
+  border-left: 4px solid #ff0707;
+}
+
+.embed-snippet.code {
+  border-left: 4px solid #007bff;
+}

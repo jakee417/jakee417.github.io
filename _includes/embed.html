@@ -1,0 +1,48 @@
+{% assign file_extension = include.link | split: '.' | last %}
+{% if file_extension == "md" %}
+{% assign embed_type = "markdown" %}
+{% elsif file_extension == "ipynb" %}
+{% assign embed_type = "ipynb" %}
+{% else %}
+{% assign embed_type = "code" %}
+{% endif %}
+
+{% assign id = include.link | remove: "https://" | remove: "http://" | slugify %}
+
+{% if include.no_dropdown %}
+<div id="embed-snippet-{{ id }}"></div>
+{% else %}
+<div class="card categories">
+  <details id="embed-snippet-{{ id }}"
+    class="embed-snippet {% if embed_type == 'markdown' %}md{% elsif embed_type == 'ipynb' %}ipynb{% else %}code{% endif %}">
+    <summary>
+      <span class="text-muted medium font-weight-light">
+        {% if embed_type == "markdown" %}
+        <span style="color: #28a745; font-weight: normal;">Markdown</span>
+        {% elsif embed_type == "ipynb" %}
+        <span style="color: #ff0707; font-weight: normal;">Jupyter Notebook</span>
+        {% else %}
+        <span style="color: #007bff; font-weight: normal;">Code Snippet</span>
+        {% endif %}
+      </span>
+    </summary>
+  </details>
+</div>
+{% endif %}
+
+<script>
+  (function () {
+    const themeMapper = Theme.getThemeMapper('github', 'github-dark');
+    const userStyle = '{{ site.theme_mode }}'
+    let initTheme = themeMapper[Theme.visualState];
+    if (userStyle == 'light') {
+      initTheme = 'github'
+    } else if (userStyle == 'dark') {
+      initTheme = 'github-dark'
+    }
+    const script = document.createElement("script");
+    script.src = `https://emgithub.com/embed-v2.js?target={{ include.link | cgi_escape }}&style=${initTheme}&type={{ embed_type }}&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on`;
+    script.async = true;
+    document.querySelector('#embed-snippet-{{ id }}').appendChild(script);
+  })();
+</script>
