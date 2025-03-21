@@ -33,7 +33,7 @@
 <script>
   (function () {
     const themeMapper = Theme.getThemeMapper('github', 'github-dark');
-    const userStyle = '{{ site.theme_mode }}'
+    const userStyle = '{{ site.theme_mode }}';
     const initTheme = userStyle == 'light' ? 'github' : (userStyle == 'dark' ? 'github-dark' : themeMapper[Theme.visualState]);
     const script = document.createElement("script");
     script.src = `https://emgithub.com/embed-v2.js?target={{ include.link | cgi_escape }}&style=${initTheme}&type={{ embed_type }}&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on`;
