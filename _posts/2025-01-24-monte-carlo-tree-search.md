@@ -103,12 +103,14 @@ Each iteration leaves the algorithm in the state where $Q(\tilde s, \tilde a)$ r
 ## One Step of MCTS
 Putting it all together, we arrive at one step of MCTS:
 
-{% include embed.html link="https://github.com/jakee417/mcts/blob/main/src/mcts.py#L59-L109" no_dropdown=true %}
+{% include embed.html link="https://github.com/jakee417/mcts/blob/main/src/mcts.py#L59-L109" %}
 
 ## Translation Example
 In this [demo notebook](https://github.com/jakee417/mcts/blob/main/mcts.ipynb), I show how MCTS can be used to improve translation from Chinese text to English:
 
-{% include markdown/mcts.md %}
+{% include embed.html link="https://github.com/jakee417/mcts/blob/main/mcts.ipynb" no_dropdown=true %}
+
+<!-- {% include markdown/mcts.md %} -->
 
 <iframe src="/assets/html/graph.html" height="300px" width="100%" style="border:none;"></iframe>
 
