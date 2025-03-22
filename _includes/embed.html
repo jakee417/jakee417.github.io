@@ -17,8 +17,8 @@
   <details id="embed-snippet-{{ id }}" class="embed-snippet {{ type }}" open>
     <summary>
       <span class="text-muted medium font-weight-light">
-        {% case file_extension %}
-        {% when "md" %}
+        {% case type %}
+        {% when "markdown" %}
         <span style="color: #28a745; font-weight: normal;">Markdown</span>
         {% when "ipynb" %}
         <span style="color: #ff0707; font-weight: normal;">Jupyter Notebook</span>

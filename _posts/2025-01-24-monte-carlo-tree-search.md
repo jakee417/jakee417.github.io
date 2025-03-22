@@ -110,8 +110,6 @@ In this [demo notebook](https://github.com/jakee417/mcts/blob/main/mcts.ipynb), 
 
 {% include embed.html link="https://github.com/jakee417/mcts/blob/main/mcts.ipynb" no_dropdown=true %}
 
-<!-- {% include markdown/mcts.md %} -->
-
 <iframe src="/assets/html/graph.html" height="300px" width="100%" style="border:none;"></iframe>
 
 ## Conclusion
