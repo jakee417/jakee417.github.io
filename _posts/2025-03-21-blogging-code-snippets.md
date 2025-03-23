@@ -74,7 +74,7 @@ Just make sure to also setup some styles under `assets` to make it look stylish:
 When individually linking each code block is impractical, we can embed an entire markdown document:
 
 1. Create a [Jupyter Notebook](https://jupyter.org/) which consists of code cells and markdown cells.
-2. Use `nbconvert` to export the entire notebook to the `_includes` directory as a markdown file:
+2. Use [`nbconvert`](https://nbconvert.readthedocs.io/en/latest/) to export the entire notebook to the `_includes` directory as a markdown file:
     ```bash
     cd path/to/filename
     jupyter nbconvert filename --to markdown --output ~/path/to/blog.github.io/_includes/markdown/filename.md
