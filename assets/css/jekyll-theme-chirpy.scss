@@ -8,19 +8,33 @@
 ';
 
 /* append your custom style below */
-.embed-snippet {
-  border-radius: 8px;
-  padding: 10px;
+summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: rgba(208, 208, 208, 0.196);
+  border-radius: 10px;
 }
 
-.embed-snippet.markdown {
-  border-left: 4px solid #28a745;
+summary.hand  {
+  cursor: pointer;
 }
 
-.embed-snippet.ipynb {
-  border-left: 4px solid #ff0707;
+summary::after {
+  content: '';
+  width: 18px;
+  height: 10px;
+  background: url('https://uploads.sitepoint.com/wp-content/uploads/2023/10/1697699669arrow.svg') no-repeat;
+  background-size: cover;
+  transition: 0.2s;
 }
 
-.embed-snippet.code {
-  border-left: 4px solid #007bff;
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] > summary::after {
+  transform: rotate(180deg);
 }

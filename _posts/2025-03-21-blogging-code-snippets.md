@@ -65,11 +65,6 @@ Which can be included using [jekyll's `include`](https://jekyllrb.com/docs/inclu
 ```
 {% endraw %}
 
-Just make sure to also setup some styles under `assets` to make it look stylish:
-
-{% include embed.html link="https://github.com/jakee417/jakee417.github.io/blob/master/assets/css/jekyll-theme-chirpy.scss#L10-L26" %}
-
-
 ## Jupyter notebook (`nbconvert`)
 When individually linking each code block is impractical, we can embed an entire markdown document:
 

@@ -13,22 +13,18 @@
 {% if include.no_dropdown %}
 <div id="embed-snippet-{{ id }}"></div>
 {% else %}
-<div class="card categories">
-  <details id="embed-snippet-{{ id }}" class="embed-snippet {{ type }}" open>
-    <summary>
-      <span class="text-muted medium font-weight-light">
-        {% case type %}
-        {% when "markdown" %}
-        <span style="color: #28a745; font-weight: normal;">Markdown</span>
-        {% when "ipynb" %}
-        <span style="color: #ff0707; font-weight: normal;">Jupyter Notebook</span>
-        {% else %}
-        <span style="color: #007bff; font-weight: normal;">Code Snippet</span>
-        {% endcase %}
-      </span>
-    </summary>
-  </details>
-</div>
+<details id="embed-snippet-{{ id }}" open>
+  <summary>
+    {% case type %}
+    {% when "markdown" %}
+    Markdown
+    {% when "ipynb" %}
+    Jupyter Notebook
+    {% else %}
+    Code Snippet
+    {% endcase %}
+  </summary>
+</details>
 {% endif %}
 
 <script>
