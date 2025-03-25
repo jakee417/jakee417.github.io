@@ -108,7 +108,7 @@ Putting it all together, we arrive at one step of MCTS:
 ## Translation Example
 In this [demo notebook](https://github.com/jakee417/mcts/blob/main/mcts.ipynb), I show how MCTS can be used to improve translation from Chinese text to English:
 
-{% include embed.html link="https://github.com/jakee417/mcts/blob/main/mcts.ipynb" no_dropdown=true %}
+{% include embed.html link="https://github.com/jakee417/mcts/blob/main/mcts.ipynb" %}
 
 <iframe src="/assets/html/graph.html" height="300px" width="100%" style="border:none;"></iframe>
 
