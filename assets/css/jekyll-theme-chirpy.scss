@@ -2,33 +2,41 @@
 ---
 
 @use 'main
-{%- if jekyll.environment == 'production' -%}
+{%- if jekyll.environment == ' production ' -%}
   .bundle
 {%- endif -%}
 ';
 
 /* append your custom style below */
+
 summary {
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
-  background-color: rgba(208, 208, 208, 0.196);
+  background-color: var(--highlight-bg-color);
   border-radius: 10px;
 }
 
-summary.hand  {
+summary:hover {
+  background-color: var(--categories-hover-bg);
+}
+
+summary.hand {
   cursor: pointer;
 }
 
 summary::after {
-  content: '';
-  width: 18px;
-  height: 10px;
-  background: url('https://uploads.sitepoint.com/wp-content/uploads/2023/10/1697699669arrow.svg') no-repeat;
-  background-size: cover;
-  transition: 0.2s;
+  content: '\f107';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-right: 8px;
+  transition: transform 300ms ease;
+}
+
+summary:hover::after {
+  color: var(--categories-icon-hover-color);
 }
 
 summary::-webkit-details-marker {
