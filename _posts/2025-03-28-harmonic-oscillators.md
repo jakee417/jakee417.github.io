@@ -141,7 +141,7 @@ $$
 \frac{Q}{C} + L\frac{d^2Q}{dt^2} = \frac{Q}{C} + L\frac{di}{dt} = v_C + v_L = 0
 $$
 
-Which is [**Kirchhoff's voltage law**](https://en.wikipedia.org/wiki/Kirchhoff%27s_circuit_laws#Kirchhoff's_voltage_law),\:
+Which is [**Kirchhoff's voltage law**](https://en.wikipedia.org/wiki/Kirchhoff%27s_circuit_laws#Kirchhoff's_voltage_law):
 
 $$
 v_C + v_L = 0 \implies \boxed{\sum_{i=1}^{n}v_i = 0}
