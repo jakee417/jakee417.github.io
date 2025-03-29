@@ -99,11 +99,11 @@ The [LC circuit](https://en.wikipedia.org/wiki/LC_circuit#) (or "tank" circuit) 
 > 
 > From [Lenz's law](https://en.wikipedia.org/wiki/Lenz%27s_law) we know that the *current induced in a circuit due to a change in a magnetic field is directed to oppose the change in flux and to exert a mechanical force which opposes the motion*. 
 > 
-> Since the capacitor will be sending current through the inductor which creates a magnetic field, the inductor will then have an [electromotive force](https://en.wikipedia.org/wiki/Electromotive_force) (emf) which affects the capacitor. The following animation from wikipedia makes this more clear:
+> Since the capacitor will be sending current through the inductor which creates a magnetic field, the inductor will then have an [electromotive force](https://en.wikipedia.org/wiki/Electromotive_force) (emf) which affects the capacitor. The following animation from [wikipedia](https://commons.wikimedia.org/w/index.php?curid=26859039) makes this more clear:
 > 
-> ![alt text](assets/img/custom/Tuned_circuit_animation_3_300ms.gif)
+> ![LC Circuit](assets/img/custom/Tuned_circuit_animation_3_300ms.gif)
 > 
-> <a href="//commons.wikimedia.org/w/index.php?title=User:Chetvorno&amp;action=edit&amp;redlink=1" class="new" title="User:Chetvorno (page does not exist)">Chetvorno</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" title="Creative Commons Zero, Public Domain Dedication">CC0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=26859039">Link</a>. You can read more about this progression [here](https://en.wikipedia.org/wiki/LC_circuit#Operation).
+> You can read more about this progression [here](https://en.wikipedia.org/wiki/LC_circuit#Operation).
 {: .prompt-info }
 
 For an LC circuit, these components will have the following Hamiltonian:
