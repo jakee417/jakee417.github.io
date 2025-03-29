@@ -27,8 +27,6 @@ $$
 \frac{\partial \mathcal L}{\partial x} - \frac{d}{dt} \frac{\partial \mathcal L}{\partial (\frac{dx}{dt})} = 0
 $$
 
-$\mathcal L = T - V$ is the classic manifestation of this rule and will be sufficient for our purposes.
-
 The [Hamiltonian](https://en.wikipedia.org/wiki/Hamiltonian_mechanics) is the total energy in a system:
 
 $$
@@ -99,7 +97,7 @@ The [LC circuit](https://en.wikipedia.org/wiki/LC_circuit#) (or "tank" circuit) 
 > 
 > From [Lenz's law](https://en.wikipedia.org/wiki/Lenz%27s_law) we know that the *current induced in a circuit due to a change in a magnetic field is directed to oppose the change in flux and to exert a mechanical force which opposes the motion*. 
 > 
-> Since the capacitor will be sending current through the inductor which creates a magnetic field, the inductor will then have an [electromotive force](https://en.wikipedia.org/wiki/Electromotive_force) (emf) which affects the capacitor. The following animation from [wikipedia](https://commons.wikimedia.org/w/index.php?curid=26859039) makes this more clear:
+> Since the capacitor will be sending current through the inductor which creates a magnetic field, the inductor will then have an [electromotive force](https://en.wikipedia.org/wiki/Electromotive_force) (emf) which affects the capacitor. The following animation from [wikipedia](https://commons.wikimedia.org/w/index.php?curid=26859039) visualizes this:
 > 
 > ![LC Circuit](assets/img/custom/Tuned_circuit_animation_3_300ms.gif)
 > 
@@ -118,7 +116,7 @@ $$
 \mathcal L = \frac{1}{2}Cv_C^2 - \frac{1}{2}Li^2
 $$
 
-Unlike in the mechanical example where we had the coordinate system $x$, our energy expressions involve different time-dependent quantities, $v$ and $i$. We can unify the "state" of the system to be the charge $Q$ at time $t$, $Q(t)$, and let this be our "electric coordinate".
+Unlike in the mechanical example where we had the coordinate system $x$, our energy expressions involve different time-dependent quantities, $v$ and $i$. We can unify the "state" of the system to be the charge $Q$ at time $t$, $Q(t)$.
 
 $$
 \begin{align*}
@@ -149,7 +147,7 @@ $$
 v_C + v_L = 0 \implies \boxed{\sum_{i=1}^{n}v_i = 0}
 $$
 
-And as before, we can show that the energy of the system is conserved:
+As before, we can show that the energy of the system is conserved:
 
 $$
 \begin{align*}
@@ -161,11 +159,11 @@ $$
 \end{align*}
 $$
 
-Where the last equality again came from the equations of motion.
+Where the last equality came from the equations of motion.
 
 ## Relating Electrical and Mechanical Harmonic Oscillators
 
-We can see a high degree of similarity with the mechanical oscillator's Hamiltonian,
+There is a high degree of similarity between the mechanical and electrical harmonic oscillators,
 
 |  | Mechanical Oscillator | Electrical Oscillator |
 | - | - | - |
@@ -177,17 +175,25 @@ With the following substitutions we see they are the same second order different
 - $m \rightarrow L$
 - $K \rightarrow \frac{1}{C}$
 
-As a result, we know a solution to the LC circuit should also be of the form:
+As a result, the solution of the LC circuit's equation of motion must also be a wave:
 
 $$
 \begin{align*}
 Q(t) &= A \sin{(\omega t + \phi)} \\ 
-i(t) &= \frac{dQ(t)}{dt} = \omega A \cos{(\omega t + \phi)} \\
-v(t) &= L\frac{di}{dt} = -\omega^2 L A \sin{(\omega t + \phi)}
 \end{align*}
 $$
 
-Where $\omega = \sqrt{\frac{1}{LC}}$ is the electrical analog for angular frequency. Below I visualize these curves through one full cycle.
+Where $\omega = \sqrt{\frac{1}{LC}}$ is the electrical analog for angular frequency. We can derive the rest of the time dependent quantities:
+
+$$
+\begin{align*}
+i(t) &= \frac{dQ(t)}{dt} = \omega A \cos{(\omega t + \phi)} \\
+v_L(t) &= L\frac{di}{dt} = -\omega^2 L A \sin{(\omega t + \phi)} \\
+v_C(t) &= \frac{Q}{C} = \frac{A}{C} \sin{(\omega t + \phi)}
+\end{align*}
+$$
+
+Here is a visualization:
 
 {% include html/lc_circuit/lc_circuit.html %}
 
@@ -195,7 +201,6 @@ Where $\omega = \sqrt{\frac{1}{LC}}$ is the electrical analog for angular freque
 
 ## Beyond LC Circuits
 The LC circuit is idealized without any resistance ($R$). In practice, circuits do have resistance and will not conserve energy (losing some energy to heat). We can add $R$ back in to form an [RLC circuit](https://en.wikipedia.org/wiki/RLC_circuit) which has [different expressions for Lagrangian and Hamiltonian](https://www.researchgate.net/publication/347363053_The_Lagrangian_and_Hamiltonian_for_RLC_Circuit_Simple_Case). We can further add an A/C voltage source which acts like a [driven harmonic oscillator](https://en.wikipedia.org/wiki/Harmonic_oscillator#Driven_harmonic_oscillators) and is used in a variety of frequency [filters](https://en.wikipedia.org/wiki/RLC_circuit#Filters).
-
 
 ## References
 [^tag]: <https://eng.libretexts.org/Bookshelves/Electrical_Engineering/Electro-Optics/Direct_Energy_(Mitofsky)/11%3A_Calculus_of_Variations/11.04%3A_Mass_Spring_Example>
