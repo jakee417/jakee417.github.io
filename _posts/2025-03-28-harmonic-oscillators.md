@@ -200,7 +200,9 @@ Here is a visualization:
 {% include embed.html link="https://github.com/jakee417/lc_circuit/blob/main/plot.py" %}
 
 ## Beyond LC Circuits
-The LC circuit is idealized without any resistance ($R$). In practice, circuits do have resistance and will not conserve energy (losing some energy to heat). We can add $R$ back in to form an [RLC circuit](https://en.wikipedia.org/wiki/RLC_circuit) which has [different expressions for Lagrangian and Hamiltonian](https://www.researchgate.net/publication/347363053_The_Lagrangian_and_Hamiltonian_for_RLC_Circuit_Simple_Case). We can further add an A/C voltage source which acts like a [driven harmonic oscillator](https://en.wikipedia.org/wiki/Harmonic_oscillator#Driven_harmonic_oscillators) and is used in a variety of frequency [filters](https://en.wikipedia.org/wiki/RLC_circuit#Filters).
+The LC circuit is idealized without any resistance ($R$). In practice, circuits do have resistance and will not conserve energy (losing some energy to heat). We can add $R$ back in to form an [RLC circuit](https://en.wikipedia.org/wiki/RLC_circuit) which has [different expressions for Lagrangian and Hamiltonian](https://www.researchgate.net/publication/347363053_The_Lagrangian_and_Hamiltonian_for_RLC_Circuit_Simple_Case). We can further add an A/C voltage source which acts like a [driven harmonic oscillator](https://en.wikipedia.org/wiki/Harmonic_oscillator#Driven_harmonic_oscillators) and is used in a variety of frequency [filters](https://en.wikipedia.org/wiki/RLC_circuit#Filters). You can see how $R$ would affect the LC circuit in this [great simulator](https://www.falstad.com/circuit/) by Paul Falstad. 
+
+<iframe src="https://tinyurl.com/26m46vwq" width="100%" height="450"></iframe>
 
 ## References
 [^tag]: <https://eng.libretexts.org/Bookshelves/Electrical_Engineering/Electro-Optics/Direct_Energy_(Mitofsky)/11%3A_Calculus_of_Variations/11.04%3A_Mass_Spring_Example>
