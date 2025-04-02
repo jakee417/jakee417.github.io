@@ -244,13 +244,19 @@ $$
 With,
 
 $$
-I_0 = \frac{\mathcal{E}_0 }{\sqrt{R^2 + (L\omega - \frac{1}{\omega C})^2}}
+\begin{align}
+  \boxed{I_0 = \frac{\mathcal{E}_0 }{\sqrt{R^2 + (L\omega - \frac{1}{\omega C})^2}}}
+\label{eqn:current_amplitude}
+\end{align}
 $$ 
 
 and,
 
 $$
-\phi = \tan^{-1}(\frac{\frac{1}{\omega C} - L\omega}{R}) = \tan^{-1}(\frac{1}{R\omega C} - \frac{L\omega}{R})
+\begin{align}
+  \boxed{\phi = \tan^{-1}(\frac{\frac{1}{\omega C} - L\omega}{R}) = \tan^{-1}(\frac{1}{R\omega C} - \frac{L\omega}{R})}
+\label{eqn:current_phase}
+\end{align}
 $$
 
 Finally, we can solve for $\Re{[\tilde I(t)]}$:
@@ -268,7 +274,10 @@ $$
 Or,
 
 $$
-\boxed{\Re{[\tilde I(t)]} = I(t) = \frac{\mathcal{E}_0 }{\sqrt{R^2 + (L\omega - \frac{1}{\omega C})^2}} \cos{(\omega t + \phi)}}
+\begin{align}
+  \boxed{\Re{[\tilde I(t)]} = I(t) = \frac{\mathcal{E}_0 }{\sqrt{R^2 + (L\omega - \frac{1}{\omega C})^2}} \cos{(\omega t + \phi)}}
+\label{eqn:lrc_current}
+\end{align}
 $$
 
 Which agrees with the result from Section 8.2 of [Purcell & Morin](../../assets/pdf/purcell_e_m.pdf). If we are willing to accept the [mathematical interlude](#mathematical-interlude) as given facts, I think this solution is pretty straightforward (if you disagree, check out the trig solution to convince yourself!).
@@ -300,7 +309,7 @@ I_0 &= \frac{\mathcal{E}_0 }{\sqrt{R^2 + (L\omega - \frac{1}{\omega C})^2}} \\
 \end{align*}
 $$
 
-Where $A = \frac{\mathcal{E}_0 C }{L\omega^2C - 1}$. This makes $I(t)$:
+Where $A = \frac{\mathcal{E}_0 C }{L\omega^2C - 1}$. Ignoring $\phi$ in $\eqref{eqn:current_phase}$ for the moment, this makes $I(t)$ in $\eqref{eqn:lrc_current}$:
 
 $$
 \begin{align*}
@@ -308,7 +317,7 @@ I(t) &=\omega A \cos{(\omega t + \phi)}
 \end{align*}
 $$
 
-Which matches the current we found for the LC circuit [previous post]({% link _posts/2025-03-28-harmonic-oscillators.md %}). 
+Which has the same form of the current we found for the LC circuit [previous post]({% link _posts/2025-03-28-harmonic-oscillators.md %}).
 
 <p style="text-align:center "> <b>There is one very big difference however: the $\omega$...</b></p>
 
@@ -318,16 +327,16 @@ $$
 \omega = \sqrt{\frac{1}{LC}} \iff L\omega^2C - 1 = 0
 $$
 
-Which was our second extreme case! Further, if $\omega = \omega_0$, then $A$ becomes undefined when $R = 0$. Luckily, $R = 0$ is an idealized case (although negligibly small $R$ is possible). For some fixed $R > 0$, when $\omega = \omega_0$ we see that $I_0$ is maximal (making $I(t)$ the most "active"). In this scenario, we say that $\omega_0$ is the **resonant frequency** for the circuit and the current reduces to that of a single resistor with an EMF:
+Which was our second extreme case! Further, if $\omega = \omega_0$, then $A$ becomes undefined when $R = 0$. Luckily, $R = 0$ is an idealized case (although negligibly small $R$ is possible). For some fixed $R > 0$, when $\omega = \omega_0$ we see that $I_0$ is maximal (making $I(t)$ the most "active"). $\omega_0$ is the **resonant frequency** of the circuit and, under these conditions, the $I(t)$ in $\eqref{eqn:lrc_current}$ reduces to that of a single resistor with an EMF:
 
 $$
 I_{\omega_0}(t) = \frac{\mathcal E_0 \cos{(\omega t + \phi)}}{R} = \frac{\mathcal E}{R}
 $$
 
-In the earlier post we saw that the capacitor's voltage and inductor's voltage were equal and opposite in an LC circuit. So this result makes sense as the components cancel each other.
+In the earlier post we saw that the capacitor's voltage and inductor's voltage were equal and opposite in an LC circuit. So this result makes sense as the components cancel each other. Somewhat amazingly, the resonant frequency of the LC circuit is *encoded* inside the more general LRC circuit with A/C voltage.
 
 ### RLC Circuit as a Bandpass Filter
-It should be clear by now that as $\omega$ goes away from $\omega_0$ the current in the circuit decreases. This can be quantified precisely (i.e. the "peakness" and "width" of this curve), see discussion in 8.2.6 of [Purcell & Morin](../../assets/pdf/purcell_e_m.pdf). Instead, we can revisit the simulation before but let the frequency vary instead of the resistance and see how it affects the circuit's max current:
+It should be clear by now that as $\omega$ goes away from $\omega_0$ the current in the circuit decreases. This can be quantified precisely (i.e. the "peakness" and "width" of this $\max_{\omega}I(t; \omega)$ curve), see discussion in 8.2.6 of [Purcell & Morin](../../assets/pdf/purcell_e_m.pdf). Instead, we can revisit the simulation before but let the frequency vary instead of the resistance and see how it affects the circuit's max current:
 
 <iframe src="https://tinyurl.com/24qnfnhj" width="100%" height="450"></iframe>
 
