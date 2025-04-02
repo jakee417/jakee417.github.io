@@ -1,9 +1,9 @@
 ---
-title: Harmonic Oscillators
+title: Harmonic Oscillators (Part 1)
 author: jake
 date: 2025-03-28 12:00:00 +0800
 categories: [Physics]
-tags: [physics, mathematics]
+tags: [physics, mathematics, electrical engineering, circuits]
 math: true
 mermaid: false
 markdown: kramdown
@@ -162,7 +162,6 @@ $$
 Where the last equality came from the equations of motion.
 
 ## Relating Electrical and Mechanical Harmonic Oscillators
-
 There is a high degree of similarity between the mechanical and electrical harmonic oscillators,
 
 |  | Mechanical Oscillator | Electrical Oscillator |
@@ -193,16 +192,23 @@ v_C(t) &= \frac{Q}{C} = \frac{A}{C} \sin{(\omega t + \phi)}
 \end{align*}
 $$
 
-Here is a visualization:
+### Visualizing LC Circuits with Plots
+
+Here is a visualization of the equations we computed above, plotted in the domain $t \in [0, 2\pi]$:
 
 {% include html/lc_circuit/lc_circuit.html %}
 
+Some important points:
+- Voltage through the capacitor and inductor are equal but opposite.
+- [Current leads the capacitor's voltage but lags behind the inductor's voltage](https://en.wikipedia.org/wiki/Leading_and_lagging_current).
+- $H(t)$ is conserved at all times.
+
 {% include embed.html link="https://github.com/jakee417/lc_circuit/blob/main/plot.py" %}
 
-## Beyond LC Circuits
-The LC circuit is idealized without any resistance ($R$). In practice, circuits do have resistance and will not conserve energy (losing some energy to heat). We can add $R$ back in to form an [RLC circuit](https://en.wikipedia.org/wiki/RLC_circuit) which has [different expressions for Lagrangian and Hamiltonian](https://www.researchgate.net/publication/347363053_The_Lagrangian_and_Hamiltonian_for_RLC_Circuit_Simple_Case). We can further add an A/C voltage source which acts like a [driven harmonic oscillator](https://en.wikipedia.org/wiki/Harmonic_oscillator#Driven_harmonic_oscillators) and is used in a variety of frequency [filters](https://en.wikipedia.org/wiki/RLC_circuit#Filters). You can see how $R$ would affect the LC circuit in this [great simulator](https://www.falstad.com/circuit/) by Paul Falstad. 
+### Visualizing LC Circuits with Simulation
+We can also visualize the LC circuit using this [great circuit simulator](https://www.falstad.com/circuit/) by Paul Falstad. To learn more about the "Resistance" parameter, check out my [next post]({% link _posts/2025-03-31-harmonic-oscillators-2.md %}) on [RLC circuits](https://en.wikipedia.org/wiki/RLC_circuit).
 
-<iframe src="https://tinyurl.com/26m46vwq" width="100%" height="450"></iframe>
+<iframe src="https://tinyurl.com/2ye5wkbc" width="100%" height="450"></iframe>
 
 ## References
 [^tag]: <https://eng.libretexts.org/Bookshelves/Electrical_Engineering/Electro-Optics/Direct_Energy_(Mitofsky)/11%3A_Calculus_of_Variations/11.04%3A_Mass_Spring_Example>
