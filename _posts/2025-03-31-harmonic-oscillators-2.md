@@ -139,8 +139,7 @@ In the next section, we will be using complex numbers to solve differential equa
 - Multiplying by a complex conjugate:
   $$
   \begin{align}
-    (a + bi)(a - bi) &= a^2 - abi + abi - b^2i^2 \nonumber\\
-    &= a^2 + b^2
+    (a + bi)(a - bi) &= a^2 + b^2
     \label{eqn:conjugate_product}
   \end{align}
   $$
