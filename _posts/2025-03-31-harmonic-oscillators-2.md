@@ -55,7 +55,7 @@ We now need to add two new terms that [generalizes the Lagrangian](https://en.wi
   Q_{res} = -\frac{\partial F}{\partial (\frac{dQ}{dt})}
   $$
 
-$Q_{res}$ is also known as a [Rayleigh dissipation function](https://en.wikipedia.org/wiki/Rayleigh_dissipation_function) and takes the place of friction from our mechanical oscillator (also known as [dampening](https://en.wikipedia.org/wiki/Damping)). The Euler Lagrange equation now looks like:
+$Q_{res}$ is also known as a [Rayleigh dissipation function](https://en.wikipedia.org/wiki/Rayleigh_dissipation_function) and takes the place of friction from our mechanical oscillator (also known as [damping](https://en.wikipedia.org/wiki/Damping)). The Euler Lagrange equation now looks like:
 
 $$
 \begin{align*}
@@ -89,7 +89,7 @@ L\frac{d^2Q}{dt^2} + R(\frac{dQ}{dt}) + \frac{Q}{C} &= \mathcal{E}_0 \cos{(\omeg
 \end{align*}
 $$
 
-This will actually be easier to convert the charge ($Q$) charges back to current ($I(t)$):
+This will actually be easier to convert the charge ($Q$) back to current ($I(t)$):
 
 $$
 \begin{align}
@@ -139,14 +139,17 @@ In the next section, we will be using complex numbers to solve differential equa
 - Multiplying by a complex conjugate:
   $$
   \begin{align}
-    (a + bi)(a - bi) = a^2 - abi + abi - b^2i^2 = a^2 + b^2
+    (a + bi)(a - bi) &= a^2 - abi + abi - b^2i^2 \nonumber\\
+    &= a^2 + b^2
     \label{eqn:conjugate_product}
   \end{align}
   $$
 - [Polar form](https://en.wikipedia.org/wiki/Polar_coordinate_system#Complex_numbers):
   $$
   \begin{align}
-    (a + bi) &= r\cos{(\theta)} + ir\sin{(\theta)} = r(\cos{(\theta)} + i\sin{(\theta)}) = r \exp{i\theta}
+    (a + bi) &= r\cos{(\theta)} + ir\sin{(\theta)} \nonumber\\
+    &= r(\cos{(\theta)} + i\sin{(\theta)}) \nonumber\\
+    &= r \exp{i\theta}
     \label{eqn:polar}
   \end{align}
   $$
