@@ -157,7 +157,7 @@ In the next section, we will be using complex numbers to solve differential equa
 Back to the physics!
 
 #### An informed guess
-For now, trust that using complex exponential functions make things easier to solve $\eqref{eqn:kirchoff}$. But clearly $\eqref{eqn:kirchoff}$ does not yet involve anything of the sort. Can we find an equation involving complex exponentials that is equivalent with $\eqref{eqn:kirchoff}$? I imagine the original author of this approach tried various functions until the correct relationship appeared. We can benefit from this and directly consider:
+For now, trust that using complex exponential functions make things easier to solve $\eqref{eqn:kirchoff}$. But clearly $\eqref{eqn:kirchoff}$ does not yet involve anything of the sort. Can we find an equation involving complex exponentials that is equivalent with $\eqref{eqn:kirchoff}$? The simplest thing to try is to replace any variable with a dependency on $t$ with it's complex counterpart:
 
 $$
 \begin{align}
@@ -166,7 +166,7 @@ L\frac{d\tilde I(t)}{dt} + R\tilde I(t) + \frac{1}{C}\int \tilde I(t) dt &= \mat
 \end{align}
 $$
 
-On the surface, $\eqref{eqn:complex_kirchoff}$ has no direct relationship with $\eqref{eqn:kirchoff}$, it is an entirely unmotivated equation. Only that they are both linear differential equations involving $L$, $C$ and $R$. However, consider taking $\Re{[\cdot]}$ of both sides of $\eqref{eqn:complex_kirchoff}$:
+Both $\eqref{eqn:kirchoff}$ & $\eqref{eqn:complex_kirchoff}$ are linear differential equations involving $L$, $C$, $R$ and the emf. To see the exact relationship between the two, consider taking $\Re{[\cdot]}$ of both sides of $\eqref{eqn:complex_kirchoff}$:
 
 $$
 \begin{align*}
@@ -175,13 +175,13 @@ $$
 \end{align*}
 $$
 
-Where we have used the "linear-enough" property of the $\Re{[\cdot]}$ operator for the LHS and $\eqref{eqn:eulers_formula}$ for the RHS. Now, if we have the condition:
+Where we have used the "linear-enough" property of the $\Re{[\cdot]}$ operator for the LHS and $\eqref{eqn:eulers_formula}$ for the RHS. It seems $\eqref{eqn:complex_kirchoff}$ is the "complex version" of $\eqref{eqn:kirchoff}$. The upshot is that $\tilde I(t)$ will solve $\eqref{eqn:complex_kirchoff}$ and $\Re{[\tilde I(t)]}$ will solve $\eqref{eqn:kirchoff}$ simultaneously! If we set:
 
 $$
 \Re{[\tilde I(t)]} = I(t)
 $$
 
-Then we know that $\tilde I(t)$ will solve $\eqref{eqn:complex_kirchoff}$ and $\Re{[\tilde I(t)]}$ (aka $I(t)$) will solve $\eqref{eqn:kirchoff}$ simultaneously!
+Then we will have an expression for $I(t)$ that solves $\eqref{eqn:kirchoff}$.
 
 > Before proceeding with solving for $\Re{[\tilde I(t)]}$, we can take a step back and appreciate this strategy. We want to solve $\eqref{eqn:kirchoff}$ for some $I(t)$ but want to avoid the tedious algebra/ trigonometry. Instead, we find some seemingly unrelated yet equivalent statement $\eqref{eqn:complex_kirchoff}$ in the complex domain with an analogous solution $\tilde I(t)$. By solving $\tilde I(t)$, we necessarily solve $\eqref{eqn:kirchoff}$ for $I(t)$. It remains to be seen whether $\Re{[\tilde I(t)]}$ is actually easier to solve than $I(t)$, but we will pursue this in the next section (spoiler alert: using our [mathematical interlude](#mathematical-interlude), it is).
 {: .prompt-info }
