@@ -4,7 +4,7 @@ docs_list_title: Pages
 docs:
   - title: Flutter Demo
     url: flutter_demo/index.html
-    description: demo of building flutter web
+    description: demo of flutter web
 
   - title: Rent vs Buy Calculator
     url: rent_vs_buy/index.html
