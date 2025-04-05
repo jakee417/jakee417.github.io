@@ -2,11 +2,31 @@
 layout: page
 # Pages that are linked
 ---
-<!-- https://jekyllrb.com/tutorials/navigation/ -->
- <!-- I am using Scenario 1: Basic List -->
 
-<ul>
-    {% for item in site.data.pages.docs %}
-    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-</ul>
+{% include lang.html %}
+
+{% assign HEAD_PREFIX = 'h_' %}
+
+{% assign page_index = 0 %}
+
+{% for item in site.data.pages.docs %}
+<div class="card categories">
+  <div id="{{ HEAD_PREFIX }}{{ page_index }}" class="card-header d-flex justify-content-between hide-border-bottom">
+    <span class="ms-2">
+      <i class="far fa-compass fa-fw"></i>
+      <a href="{{ item.url }}" class="ms-2">
+        {{ item.title }}
+        <span class="text-muted small font-weight-light">
+          {{ item.description }}
+        </span>
+      </a>
+    </span>
+    <span>
+      <a href="{{ item.url }}" class="ms-2">
+        <i class="fas fa-fw fa-angle-right"></i>
+      </a>
+    </span>
+  </div>
+</div>
+{% assign page_index = page_index | plus: 1 %}
+{% endfor %}
