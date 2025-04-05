@@ -4,9 +4,12 @@ docs_list_title: Pages
 docs:
   - title: Flutter Demo
     url: flutter_demo/index.html
+    description: demo of building flutter web
 
   - title: Rent vs Buy Calculator
     url: rent_vs_buy/index.html
+    description: to rent or buy?
 
   - title: Rail Yard
     url: rail_yard/index.html
+    description: model train switch controller
