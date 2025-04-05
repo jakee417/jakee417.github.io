@@ -13,3 +13,7 @@ docs:
   - title: Rail Yard
     url: rail_yard/index.html
     description: model train switch controller
+
+  - title: Pro Roller
+    url: https://github.com/jakee417/Pro-Roller-4.0
+    description: ios dice rolling
