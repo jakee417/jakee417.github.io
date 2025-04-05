@@ -1,6 +1,6 @@
-docs_list_title: Pages
+docs_list_title: apps
 
-# All url's are relatives to /pages/*
+# All url's are relatives to /apps/*
 docs:
   - title: Flutter Demo
     url: flutter_demo/index.html

@@ -1,17 +1,17 @@
 ---
 layout: page
-# Pages that are linked
+# Apps that are linked
 ---
 
 {% include lang.html %}
 
 {% assign HEAD_PREFIX = 'h_' %}
 
-{% assign page_index = 0 %}
+{% assign app_index = 0 %}
 
-{% for item in site.data.pages.docs %}
+{% for item in site.data.apps.docs %}
 <div class="card categories">
-  <div id="{{ HEAD_PREFIX }}{{ page_index }}" class="card-header d-flex justify-content-between hide-border-bottom">
+  <div id="{{ HEAD_PREFIX }}{{ app_index }}" class="card-header d-flex justify-content-between hide-border-bottom">
     <span class="ms-2">
       <i class="far fa-compass fa-fw"></i>
       <a href="{{ item.url }}" class="ms-2">
@@ -23,5 +23,5 @@ layout: page
     </span>
   </div>
 </div>
-{% assign page_index = page_index | plus: 1 %}
+{% assign app_index = app_index | plus: 1 %}
 {% endfor %}
