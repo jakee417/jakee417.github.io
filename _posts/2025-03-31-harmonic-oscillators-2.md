@@ -78,7 +78,9 @@ $$
 F = \frac{1}{2}R (\frac{dQ}{dt})^2
 $$ 
 
-which is quadratic in $\frac{dQ}{dt}$. I am not sure if its just a coincidence that the power of a resistor ($P = i^2R$) is related by $P = 2F$, but regardless, this $F$ will give the correct Kirchhoff loop equation.
+which is quadratic in $\frac{dQ}{dt}$ and is related to the power ($P = vi = i^2R$) by $P = 2F$. Going back to the mechanical oscillator, the dissipation function caused by friction would be $F_{mechanical} = \frac{1}{2}bv^2$ where $b$ is the damping coefficient analogous to resistance $R$. This gives $Q_{mechanical} = -bv$ and a mechanical "power" as $P_{mechanical} = Fv = v^2 b$. So, we see a pretty good match between the RLC circuit and the [damped harmonic oscillator](https://en.wikipedia.org/wiki/Harmonic_oscillator#Damped_harmonic_oscillator).
+
+Regardless, $F$ gives the correct Kirchhoff loop equation and now we are ready to solve for the equations of motion.
 
 ### Equations of Motion
 Our goal is to solve this second order differential equation we got from the [Lagrangian](#lagrangian) above.
