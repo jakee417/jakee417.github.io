@@ -13,3 +13,7 @@ docs:
   - title: Rail Yard
     url: rail_yard/index.html
     description: model train switch controller
+
+  - title: Password Gen
+    url: password_generator/index.html
+    description: secure passwords
