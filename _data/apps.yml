@@ -17,3 +17,7 @@ docs:
   - title: Password Gen
     url: password_generator/index.html
     description: secure passwords
+
+  - title: APRS Link
+    url: aprs_link/index.html
+    description: security challenge
