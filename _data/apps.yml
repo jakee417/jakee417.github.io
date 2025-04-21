@@ -24,4 +24,4 @@ docs:
 
   - title: Vector Viz
     url: vector_viz/index.html
-    description: contravariant vector
+    description: contravariant vector viewer
