@@ -6,8 +6,10 @@ document.head.appendChild(script);
 
 // Set up the SVG container
 const margin = { top: 20, right: 20, bottom: 20, left: 20 };
-let width = window.innerWidth - 40; // Responsive width with max of 800px
-let height = window.innerHeight - 200; // Responsive height with max of 600px
+const maxWidth = 1200; // Maximum width for the visualization
+const maxHeight = 800; // Maximum height for the visualization
+let width = Math.min(window.innerWidth - 40, maxWidth); // Responsive width with max constraint
+let height = Math.min(window.innerHeight - 200, maxHeight); // Responsive height with max constraint
 
 // Grid dimensions (much larger than visible area)
 const gridWidth = width * 10;
@@ -49,9 +51,9 @@ const vectorGroup = svg.append("g")
 
 // Function to handle window resize
 function handleResize() {
-    // Update dimensions
-    width = window.innerWidth - 40;
-    height = window.innerHeight - 200;
+    // Update dimensions with maximum constraints
+    width = Math.min(window.innerWidth - 40, maxWidth);
+    height = Math.min(window.innerHeight - 200, maxHeight);
 
     // Update center coordinates
     centerX = width / 2;
@@ -163,29 +165,6 @@ rotationSliderContainer.html(`
     <span id="rotation-value">0°</span>
 `);
 
-// Add reset button container
-const resetButtonContainer = sliderContainer.append("div")
-    .style("display", "none");
-
-const resetButton = resetButtonContainer
-    .append("button")
-    .text("Reset Vector")
-    .style("padding", "5px 10px")
-    .style("cursor", "pointer")
-    .style("background-color", "#2c3e50")
-    .style("color", "white")
-    .style("border", "none")
-    .style("border-radius", "4px")
-    .style("font-size", "14px")
-    .on("click", function () {
-        // Reset vector to initial position
-        vector.magnitude = initialMagnitude;
-        vector.angle = 45;
-        updateVector();
-        // Hide the reset button
-        resetButtonContainer.style("display", "none");
-    });
-
 // Add event listener for basis length slider
 d3.select("#basis-length").on("input", function () {
     basisVectorLength = +this.value;
@@ -229,13 +208,6 @@ function updateVector() {
     // Re-render MathJax
     if (window.MathJax) {
         MathJax.typeset([equationText.node()]);
-    }
-
-    // Show reset button if vector is not in initial position
-    if (vector.magnitude !== initialMagnitude || vector.angle !== 45) {
-        resetButtonContainer.style("display", "block");
-    } else {
-        resetButtonContainer.style("display", "none");
     }
 
     // Clear previous basis vectors
