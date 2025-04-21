@@ -21,3 +21,7 @@ docs:
   - title: APRS Link
     url: aprs_link/index.html
     description: security challenge
+
+  - title: Vector Viz
+    url: vector_viz/index.html
+    description: contravariant vector
