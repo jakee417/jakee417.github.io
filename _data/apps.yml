@@ -25,3 +25,7 @@ docs:
   - title: Vector Viz
     url: vector_viz/index.html
     description: contravariant vector viewer
+
+  - title: Weather
+    url: weather/index.html
+    description: 7Timer! forecast
