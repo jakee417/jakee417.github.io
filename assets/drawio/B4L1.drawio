@@ -1,0 +1,153 @@
+<mxfile host="65bd71144e">
+    <diagram id="JDI_gfJpjxLJ_JYhKjTu" name="Page-1">
+        <mxGraphModel dx="1368" dy="1078" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Lecture 1 - Equivalence Principle and Tensor Analysis" style="swimlane;fontFamily=Comic Sans MS;fontSize=18;align=left;fillColor=#f8cecc;strokeColor=#b85450;fillStyle=auto;rounded=1;startSize=30;labelBackgroundColor=none;swimlaneFillColor=#FFCCCC;gradientColor=none;gradientDirection=south;glass=0;shadow=0;textShadow=0;labelBorderColor=none;collapsible=0;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="10" width="780" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="34" target="37">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="310" y="360" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="E-6iDWutbOKhYZRiamqX-6" value="Elevator Diagram" style="swimlane;fontFamily=Comic Sans MS;fontSize=18;align=left;fillColor=#d5e8d4;strokeColor=#82b366;fillStyle=auto;rounded=1;startSize=30;swimlaneFillColor=none;collapsible=0;enumerate=0;comic=0;moveCells=0;fixedWidth=1;resizable=1;movableLabel=0;backgroundOutline=0;container=1;autosize=0;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="60" width="751" height="390" as="geometry">
+                        <mxRectangle x="40" y="150" width="250" height="40" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="37" value="&lt;p&gt;&lt;font face=&quot;Comic Sans MS&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;Equivalence Principle&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font face=&quot;Comic Sans MS&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Gravity is in some sense the same thing as acceleration&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;" style="text;strokeColor=#82b366;align=center;fillColor=#d5e8d4;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="E-6iDWutbOKhYZRiamqX-6">
+                    <mxGeometry x="360" y="290" width="330" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="Coordinate Transformation" style="swimlane;fontFamily=Comic Sans MS;fontSize=18;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;fillStyle=auto;rounded=1;startSize=30;swimlaneFillColor=#E6E6E6;collapsible=0;enumerate=0;comic=0;moveCells=0;fixedWidth=1;resizable=1;movableLabel=0;backgroundOutline=0;container=1;autosize=0;" vertex="1" parent="E-6iDWutbOKhYZRiamqX-6">
+                    <mxGeometry x="30" y="295" width="250" height="70" as="geometry">
+                        <mxRectangle x="40" y="150" width="250" height="40" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="40" value="`z^\prime = z - L(t)`" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontFamily=Comic Sans MS;overflow=visible;portConstraint=none;connectable=0;autosizeGrid=1;backgroundOutline=0;recursiveResize=0;allowArrows=1;" vertex="1" parent="39">
+                    <mxGeometry x="50.5" y="30" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="vg88usDtNtBHZfyLmnjd-2" value="Mechanical Momentum" style="swimlane;fontFamily=Comic Sans MS;fontSize=18;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;fillStyle=auto;rounded=1;startSize=30;swimlaneFillColor=#E6E6E6;collapsible=0;enumerate=0;comic=0;moveCells=0;fixedWidth=1;resizable=1;movableLabel=0;backgroundOutline=0;container=1;autosize=0;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="720" width="230" height="120" as="geometry">
+                        <mxRectangle x="40" y="150" width="250" height="40" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="vg88usDtNtBHZfyLmnjd-3" value="`p_x = \sum_i m_i \dot x_i`&lt;div&gt;- Only applies to particles&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontFamily=Comic Sans MS;overflow=visible;portConstraint=none;connectable=0;autosizeGrid=1;backgroundOutline=0;recursiveResize=0;allowArrows=1;" parent="vg88usDtNtBHZfyLmnjd-2" vertex="1">
+                    <mxGeometry x="6" y="42" width="270" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="100" y="330" as="sourcePoint"/>
+                        <mxPoint x="100" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="`z`" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="3" vertex="1" connectable="0">
+                    <mxGeometry x="0.181" y="3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="100" y="330" as="sourcePoint"/>
+                        <mxPoint x="330" y="330" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="160" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="endArrow=none;dashed=1;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="8" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="200" y="330" as="sourcePoint"/>
+                        <mxPoint x="280" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="`L(t)`" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="9" vertex="1" connectable="0">
+                    <mxGeometry x="-0.013" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="" style="endArrow=none;dashed=1;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="150" y="240" as="sourcePoint"/>
+                        <mxPoint x="250" y="240" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="150" y="240" as="sourcePoint"/>
+                        <mxPoint x="150" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="`z^&#39;`" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="12" vertex="1" connectable="0">
+                    <mxGeometry x="0.181" y="3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="8" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="199.64" y="130" as="sourcePoint"/>
+                        <mxPoint x="200" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="Velocity `v` or Acceleration `g`" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="14" vertex="1" connectable="0">
+                    <mxGeometry x="0.181" y="3" relative="1" as="geometry">
+                        <mxPoint x="33" y="4" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="`z^\prime = 0`" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="235" y="218" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="`z = 0`" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="44.5" y="313" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="190" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="`P`" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="170" width="40" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" style="edgeStyle=none;html=1;" edge="1" parent="1" source="24">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="570" y="165" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="24" value="Uniform Velocity" style="swimlane;fontFamily=Comic Sans MS;fontSize=18;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;fillStyle=auto;rounded=1;startSize=30;swimlaneFillColor=#E6E6E6;collapsible=0;enumerate=0;comic=0;moveCells=0;fixedWidth=1;resizable=1;movableLabel=0;backgroundOutline=0;container=1;autosize=0;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="120" width="170" height="90" as="geometry">
+                        <mxRectangle x="40" y="150" width="250" height="40" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" value="`L(t) = vt`" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontFamily=Comic Sans MS;overflow=visible;portConstraint=none;connectable=0;autosizeGrid=1;backgroundOutline=0;recursiveResize=0;allowArrows=1;" parent="24" vertex="1">
+                    <mxGeometry x="30" y="38" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="26" target="34">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="Accelerated Frame" style="swimlane;fontFamily=Comic Sans MS;fontSize=18;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;fillStyle=auto;rounded=1;startSize=30;swimlaneFillColor=#E6E6E6;collapsible=0;enumerate=0;comic=0;moveCells=0;fixedWidth=1;resizable=1;movableLabel=0;backgroundOutline=0;container=1;autosize=0;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="240" width="180" height="90" as="geometry">
+                        <mxRectangle x="40" y="150" width="250" height="40" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="27" value="`L(t) = \frac{1}{2} g t^2`" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontFamily=Comic Sans MS;overflow=visible;portConstraint=none;connectable=0;autosizeGrid=1;backgroundOutline=0;recursiveResize=0;allowArrows=1;" parent="26" vertex="1">
+                    <mxGeometry x="20" y="38" width="240" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="Galilean Relativity" style="swimlane;fontFamily=Comic Sans MS;fontSize=18;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;fillStyle=auto;rounded=1;startSize=30;swimlaneFillColor=#E6E6E6;collapsible=0;enumerate=0;comic=0;moveCells=0;fixedWidth=1;resizable=1;movableLabel=0;backgroundOutline=0;container=1;autosize=0;connectable=1;" vertex="1" parent="1">
+                    <mxGeometry x="570" y="120" width="210" height="90" as="geometry">
+                        <mxRectangle x="40" y="150" width="250" height="40" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" value="`\ddot z^\prime = \ddot z \implies F = m\ddot z^\prime`" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontFamily=Comic Sans MS;overflow=visible;portConstraint=none;connectable=0;autosizeGrid=1;backgroundOutline=0;recursiveResize=0;allowArrows=1;" vertex="1" parent="30">
+                    <mxGeometry x="10" y="38" width="510" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="Fictitious Force" style="swimlane;fontFamily=Comic Sans MS;fontSize=18;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;fillStyle=auto;rounded=1;startSize=30;swimlaneFillColor=#E6E6E6;collapsible=0;enumerate=0;comic=0;moveCells=0;fixedWidth=1;resizable=1;movableLabel=0;backgroundOutline=0;container=1;autosize=0;connectable=1;" vertex="1" parent="1">
+                    <mxGeometry x="570" y="240" width="210" height="90" as="geometry">
+                        <mxRectangle x="40" y="150" width="250" height="40" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="35" value="`m\ddot z^\prime = F - mg`" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontFamily=Comic Sans MS;overflow=visible;portConstraint=none;connectable=0;autosizeGrid=1;backgroundOutline=0;recursiveResize=0;allowArrows=1;" vertex="1" parent="34">
+                    <mxGeometry x="20" y="38" width="260" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
