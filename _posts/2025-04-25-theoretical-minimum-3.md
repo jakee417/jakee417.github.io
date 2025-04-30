@@ -10,6 +10,9 @@ image:
   path: /assets/img/custom/mindmap.png
   alt: A mindmap can help collect your thoughts
 ---
-My mind map for [Theoretical Minimum, Special Relativity And Classical Field Theory](https://theoreticalminimum.com/courses/special-relativity-and-electrodynamics/2012/spring).
+My mind map for [Theoretical Minimum, General Relativity](https://theoreticalminimum.com/courses/general-relativity/2012/fall).
 
-## Lecture 1 - The Lorentz Transformation
+## Lecture 1 - Equivalence Principle and Tensor Analysis
+
+> This post is currently under construction
+{: .prompt-warning }
