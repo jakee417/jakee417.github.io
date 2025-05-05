@@ -13,6 +13,11 @@ image:
 My mind map for [Theoretical Minimum, General Relativity](https://theoreticalminimum.com/courses/general-relativity/2012/fall).
 
 ## Lecture 1 - Equivalence Principle and Tensor Analysis
+![alt](assets/drawio/B4L1-Page-1.drawio.png)
+
+![alt](assets/drawio/B4L1-Page-2.drawio.png)
+
+## Lecture 2 - Tensor Mathematics
 
 > This post is currently under construction
 {: .prompt-warning }
