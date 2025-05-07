@@ -9,19 +9,21 @@ layout: page
 
 {% assign app_index = 0 %}
 
-{% for item in site.data.apps.docs %}
-<div class="card categories">
-  <div id="{{ HEAD_PREFIX }}{{ app_index }}" class="card-header d-flex justify-content-between hide-border-bottom">
-    <span class="ms-2">
-      <i class="far fa-compass fa-fw"></i>
-      <a href="{{ item.url }}" class="ms-2">
-        {{ item.title }}
-        <span class="text-muted small font-weight-light">
-          {{ item.description }}
-        </span>
-      </a>
-    </span>
-  </div>
-</div>
-{% assign app_index = app_index | plus: 1 %}
-{% endfor %}
+<section>
+  {% for item in site.data.apps.docs %}
+  <article class="card categories">
+    <header id="{{ HEAD_PREFIX }}{{ app_index }}" class="card-header d-flex justify-content-between hide-border-bottom">
+      <span class="ms-2">
+        <i class="far fa-compass fa-fw"></i>
+        <a href="{{ item.url }}" class="ms-2">
+          {{ item.title }}
+          <span class="text-muted small font-weight-light">
+            {{ item.description }}
+          </span>
+        </a>
+      </span>
+    </header>
+  </article>
+  {% assign app_index = app_index | plus: 1 %}
+  {% endfor %}
+</section>
