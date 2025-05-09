@@ -18,9 +18,12 @@ My mind map for [Theoretical Minimum, General Relativity](https://theoreticalmin
 ![alt](assets/drawio/B4L1-Page-2.drawio.png)
 
 ## Lecture 2 - Tensor Mathematics
-> Check out my [Vector Viewer app](/apps/vector_viz/index.html) to see contravariant vectors in action!
+> Check out my [Vector Viewer app](/apps/vector_viz/index.html) to see contravariant & covariant vectors in action!
 {: .prompt-info }
 
+![alt](assets/drawio/B4L2.drawio.png)
+
+## Lecture 3
 > This post is currently under construction
 {: .prompt-warning }
 
