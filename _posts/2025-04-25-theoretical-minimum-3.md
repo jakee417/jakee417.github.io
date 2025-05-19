@@ -23,8 +23,9 @@ My mind map for [Theoretical Minimum, General Relativity](https://theoreticalmin
 
 ![alt](assets/drawio/B4L2.drawio.png)
 
-## Lecture 3
-> This post is currently under construction
+## Lecture 3 - Flatness and Curvature
+![alt](assets/drawio/B4L3.drawio.png)
 {: .prompt-warning }
 
-
+## Lecture 4
+> This post is currently under construction
