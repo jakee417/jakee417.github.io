@@ -25,7 +25,10 @@ My mind map for [Theoretical Minimum, General Relativity](https://theoreticalmin
 
 ## Lecture 3 - Flatness and Curvature
 ![alt](assets/drawio/B4L3.drawio.png)
-{: .prompt-warning }
 
-## Lecture 4
+## Lecture 4 - Geodesics and Gravity
+![alt](assets/drawio/B4L4.drawio.png)
+
+## Lecture 5
 > This post is currently under construction
+{: .prompt-warning }
