@@ -29,6 +29,12 @@ My mind map for [Theoretical Minimum, General Relativity](https://theoreticalmin
 ## Lecture 4 - Geodesics and Gravity
 ![alt](assets/drawio/B4L4.drawio.png)
 
-## Lecture 5
+## Lecture 5 - Metric for a Gravitational Field
+> Check out my solution to [exercise 1]({% link _posts/2025-05-31-b4-l5-ex-1.md %})!
+{: .prompt-info }
+
+![alt](assets/drawio/B4L5.drawio.png)
+
+## Lecture 6
 > This post is currently under construction
 {: .prompt-warning }
