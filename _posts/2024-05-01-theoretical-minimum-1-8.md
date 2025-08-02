@@ -1,5 +1,5 @@
 ---
-title: Theoretical Minimum - Classical Mechanics, Lecture 8
+title: Classical Mechanics - Lecture 8 - Hamiltonian Mechanics and Time-Translation Invariance
 author: jake
 date: 2024-05-01 12:00:00 +0800
 categories: [Physics, Theoretical Minimum]

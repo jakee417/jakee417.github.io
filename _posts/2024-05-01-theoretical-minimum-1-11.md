@@ -1,5 +1,5 @@
 ---
-title: Theoretical Minimum - Classical Mechanics, Lecture 11
+title: Classical Mechanics - Lecture 11 - Electric and Magnetic Forces
 author: jake
 date: 2024-05-02 12:00:00 +0800
 categories: [Physics, Theoretical Minimum]

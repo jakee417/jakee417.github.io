@@ -1,5 +1,5 @@
 ---
-title: Theoretical Minimum - Special Relativity And Classical Field Theory, Lecture 2
+title: Special Relativity And Classical Field Theory - Lecture 2 - Velocities & 4-Vectors
 author: jake
 date: 2024-05-30 12:00:00 +0800
 categories: [Physics, Theoretical Minimum]

@@ -1,5 +1,5 @@
 ---
-title: Theoretical Minimum - Special Relativity And Classical Field Theory, Lecture 8
+title: Special Relativity And Classical Field Theory - Lecture 8 - Maxwell's Equations
 author: jake
 date: 2024-05-30 12:00:00 +0800
 categories: [Physics, Theoretical Minimum]

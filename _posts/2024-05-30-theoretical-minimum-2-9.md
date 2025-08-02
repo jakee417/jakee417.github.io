@@ -1,5 +1,5 @@
 ---
-title: Theoretical Minimum - Special Relativity And Classical Field Theory, Lecture 9
+title: Special Relativity And Classical Field Theory - Lecture 9 - Physical Consequences of Maxwell's Equations
 author: jake
 date: 2024-05-30 12:00:00 +0800
 categories: [Physics, Theoretical Minimum]

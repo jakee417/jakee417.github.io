@@ -1,5 +1,5 @@
 ---
-title: Theoretical Minimum - General Relativity, Lecture 3
+title: General Relativity - Lecture 3 - Flatness and Curvature
 author: jake
 date: 2025-04-25 12:00:00 +0800
 categories: [Physics, Theoretical Minimum]

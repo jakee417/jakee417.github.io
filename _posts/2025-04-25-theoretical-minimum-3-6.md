@@ -1,5 +1,5 @@
 ---
-title: Theoretical Minimum - General Relativity, Lecture 6
+title: General Relativity, Lecture 6
 author: jake
 date: 2025-04-25 12:00:00 +0800
 categories: [Physics, Theoretical Minimum]
