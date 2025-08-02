@@ -1,5 +1,5 @@
 ---
-title: Theoretical Minimum - Special Relativity And Classical Field Theory, Lecture 7
+title: Special Relativity And Classical Field Theory - Lecture 7 - Fundamental Principles of Gauge Invariance
 author: jake
 date: 2024-05-30 12:00:00 +0800
 categories: [Physics, Theoretical Minimum]

@@ -1,5 +1,5 @@
 ---
-title: Theoretical Minimum - Classical Mechanics, Lecture 1
+title: Classical Mechanics - Lecture 1 - The Nature of Classical Physics
 author: jake
 date: 2024-05-01 12:00:00 +0800
 categories: [Physics, Theoretical Minimum]

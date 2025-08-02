@@ -1,5 +1,5 @@
 ---
-title: Theoretical Minimum - Special Relativity And Classical Field Theory, Lecture 11
+title: Special Relativity And Classical Field Theory - Lecture 11 - Field Energy and Momentum
 author: jake
 date: 2024-05-31 12:00:00 +0800
 categories: [Physics, Theoretical Minimum]
