@@ -15,5 +15,4 @@ My mind map for [Theoretical Minimum, General Relativity](https://theoreticalmin
 ## Lecture 6
 ![alt](assets/drawio/B4L6-Page-1.drawio.png)
 
-> The second part of this post is currently under construction
-{: .prompt-warning }
+![alt](assets/drawio/B4L6-Page-2.drawio.png)
