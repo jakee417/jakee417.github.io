@@ -108,9 +108,9 @@ $$
 \begin{align*}
 \frac{\sqrt{1 - \frac{u^2}{c^2}}\sqrt{1 - \frac{v^2}{c^2}}}{1 + \frac{uv}{c^2}} &= \frac{\sqrt{1 - \frac{u^2}{c^2} - \frac{v^2}{c^2} + \frac{u^2v^2}{c^4}}}{1 + \frac{uv}{c^2}} \\
 &= \sqrt{\frac{1 + \frac{2uv}{c^2} + \frac{u^2v^2}{c^4} - \frac{u^2}{c^2} - \frac{2uv}{c^2} - \frac{v^2}{c^2}}{(1 + \frac{uv}{c^2})^2}} \\
-&= \sqrt{\frac{(1 + \frac{uv}{c^2})^2 - \frac{u^2}{c^2} - \frac{2uv}{c^2} - \frac{v^2}{c^2}}{(1 + \frac{uv}{c^2})^2}} \\
-&= \sqrt{\frac{c^2(1 + \frac{uv}{c^2})^2 - u^2 - 2uv - v^2}{c^2(1 + \frac{uv}{c^2})^2}} \\
-&= \sqrt{1 - \frac{u^2 + 2uv + v^2}{c^2(1 + \frac{uv}{c^2})^2}} \\
+&= \sqrt{\frac{(1 + \frac{uv}{c^2})^2 - \frac{1}{c^2}(u^2 + 2uv + v^2)}{(1 + \frac{uv}{c^2})^2}} \\
+&= \sqrt{\frac{c^2(1 + \frac{uv}{c^2})^2 - (u + v)^2}{c^2(1 + \frac{uv}{c^2})^2}} \\
+&= \sqrt{1 - \frac{(u + v)^2}{c^2(1 + \frac{uv}{c^2})^2}} \\
 &= \sqrt{1 - \frac{(u + v)^2}{c^2(1 + \frac{uv}{c^2})^2}} \\ 
 &= \sqrt{1 - \frac{(\frac{u + v}{1 + \frac{uv}{c^2}})^2}{c^2}}
 \end{align*}
