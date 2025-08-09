@@ -168,7 +168,7 @@ $$
 
 The $v's$ cancel out leaving just $c$! So all observers, regardless of their reference frame, always see light traveling at $c$ thus avoiding the contradiction.
 
-But certainly this must be a fluke, what if we went crazy and said that $v = u = c$ that the right observer was traveling at light speed *and then* shot a light beam from their flashlight. In this case:
+But certainly this must be a fluke! What if we went crazy and said that $v = u = c$ that the right observer was traveling at light speed *and then* shot a light beam from their flashlight? In this case:
 
 $$
 \begin{align*}
