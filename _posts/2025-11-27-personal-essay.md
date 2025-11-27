@@ -7,7 +7,7 @@ tags: [pinyin]
 math: false
 mermaid: false
 image:
-  path: /assets/img/custom/grouse.png
+  path: /assets/img/custom/biography.png
   alt: Foggy Grouse Sprites
 ---
 
