@@ -1,11 +1,11 @@
 {
-    "name": "Rent vs. Buy",
-    "short_name": "rent_vs_buy",
+    "name": "Finance Calculator",
+    "short_name": "finance_calculator",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Rent vs buy calculator.",
+    "description": "Finance calculators.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
