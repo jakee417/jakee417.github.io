@@ -7,8 +7,12 @@ docs:
     description: demo of flutter web
 
   - title: Rent vs Buy Calculator
-    url: rent_vs_buy/index.html
+    url: finance_calculator/#/rent-vs-buy
     description: to rent or buy?
+
+  - title: Refinance Calculator
+    url: finance_calculator/#/refinance
+    description: refinance your mortgage
 
   - title: Rail Yard
     url: rail_yard/index.html
