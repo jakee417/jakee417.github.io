@@ -9,6 +9,7 @@ mermaid: false
 image:
   path: /assets/img/custom/grouse.png
   alt: Foggy Grouse Sprites
+hidden: true
 ---
 
 Check out my [Foggy Grouse](https://www.nexusmods.com/stardewvalley/mods/37714) mod for Stardew Valley!

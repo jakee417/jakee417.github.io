@@ -9,6 +9,7 @@ mermaid: false
 image:
   path: /assets/img/custom/biography.png
   alt: My pinyin personal essay
+hidden: true
 ---
 
 Wǒ jiào dài àolún。wǒ shì méiguó rén。wǒ jīn nián sān shí sān suì。wǒ zhù zài Issaquah，zài xīyǎtú pángbiān。wǒ de jiā zài túshūguǎn pángbiān。wǒ de gōngzuò shì chéngxùyuán。

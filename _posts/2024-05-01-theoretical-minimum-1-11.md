@@ -9,6 +9,7 @@ mermaid: false
 image:
   path: /assets/img/custom/mindmap.png
   alt: A mindmap can help collect your thoughts
+hidden: true
 ---
 My mind map for [Theoretical Minimum, Classical Mechanics](https://theoreticalminimum.com/courses/classical-mechanics/2011/fall).
 

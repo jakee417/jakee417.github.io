@@ -9,6 +9,7 @@ mermaid: false
 image:
   path: /assets/img/custom/flutter.png
   alt: Flutter logo
+hidden: true
 ---
 
 [**Rent vs. Buy Calculator**]({% link apps/finance_calculator/index.html %})
