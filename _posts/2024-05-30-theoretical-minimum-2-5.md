@@ -9,6 +9,7 @@ mermaid: false
 image:
   path: /assets/img/custom/mindmap.png
   alt: A mindmap can help collect your thoughts
+hidden: true
 ---
 My mind map for [Theoretical Minimum, Special Relativity And Classical Field Theory](https://theoreticalminimum.com/courses/special-relativity-and-electrodynamics/2012/spring).
 

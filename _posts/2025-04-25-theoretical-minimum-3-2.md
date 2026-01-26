@@ -9,6 +9,7 @@ mermaid: false
 image:
   path: /assets/img/custom/mindmap.png
   alt: A mindmap can help collect your thoughts
+hidden: true
 ---
 My mind map for [Theoretical Minimum, General Relativity](https://theoreticalminimum.com/courses/general-relativity/2012/fall).
 
