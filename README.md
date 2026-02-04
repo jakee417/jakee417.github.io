@@ -1,5 +1,6 @@
 <!-- markdownlint-disable-next-line -->
 # Jake's Blog
+
 A space for me to blog.
 
 ## Updating
