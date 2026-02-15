@@ -25,7 +25,12 @@
         "mhutchie.git-graph",
         // github actions
         "github.vscode-github-actions",
-        "streetsidesoftware.code-spell-checker"
+        "streetsidesoftware.code-spell-checker",
+        // Python & Jupyter
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        // Claude Code
+        "anthropic.claude-code"
       ]
     }
   }
