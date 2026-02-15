@@ -29,4 +29,5 @@ assets/.DS_Store
 .DS_Store
 _sass/vendors/*
 assets/js/dist/*
+.venv/*/**
 
