@@ -204,12 +204,14 @@ $$
 \log p(x \mid \theta+\delta\theta) - \log p(x \mid \theta) \approx \nabla_\theta \log p(x \mid \theta)^\top \delta\theta + \frac{1}{2}\delta\theta^\top \nabla^2_\theta \log p(x \mid \theta) \delta\theta
 $$
 
-**Approximating the Expectation (Change of Measure)**
-
-To evaluate the expectation over the perturbed distribution $p_{\theta+\delta\theta}$, we use the **log-derivative trick** to rewrite the density:
+To evaluate the expectation over the perturbed distribution $p_{\theta+\delta\theta}$, we can rewrite the density:
 
 $$
-p(x \mid \theta+\delta\theta) \approx p(x \mid \theta) + \nabla_\theta p(x \mid \theta)^\top \delta\theta = p(x \mid \theta) \left( 1 + \nabla_\theta \log p(x \mid \theta)^\top \delta\theta \right)
+\begin{aligned}
+p(x \mid \theta+\delta\theta) &\approx p(x \mid \theta) + \nabla_\theta p(x \mid \theta)^\top \delta\theta \\
+&= p(x \mid \theta) + p(x \mid \theta)\nabla_\theta \log p(x \mid \theta)^\top \delta\theta \\
+ &= p(x \mid \theta) \left( 1 + \nabla_\theta \log p(x \mid \theta)^\top \delta\theta \right)
+\end{aligned}
 $$
 
 This allows us to convert the expectation over $p_{\theta+\delta\theta}$ into an expectation over $p_\theta$:
@@ -218,7 +220,7 @@ $$
 \mathbb{E}_{p_{\theta+\delta\theta}}[f(x)] \approx \mathbb{E}_{p_\theta} \left[ f(x) \left( 1 + \nabla_\theta \log p(x \mid \theta)^\top \delta\theta \right) \right]
 $$
 
-Substituting $f(x)$ with the log-likelihood ratio expansion:
+Substituting $f(x)$ with the log-likelihood ratio expansion (using the abbreviation: $\nabla \log p = \nabla_\theta \log p(x \mid \theta)$):
 
 $$
 \begin{aligned}
@@ -228,9 +230,7 @@ $$
 \end{aligned}
 $$
 
-(Notation abbreviated: $\nabla \log p = \nabla_\theta \log p(x \mid \theta)$)
-
-1.  **First Term:** $\mathbb{E}[\nabla \log p]^\top \delta\theta = 0$ (Score function property).
+1.  **First Term:** $\mathbb{E}[\nabla \log p]^\top \delta\theta = 0$ (Bartlett's first identity).
 2.  **Second Term:** $\mathbb{E}[\nabla^2 \log p] = -\mathbf{F}$ (Bartlett's second identity).
 3.  **Third Term:** $\mathbb{E}[(\nabla \log p)(\nabla \log p)^\top] = \mathbf{F}$ (Definition of Fisher Information).
 
