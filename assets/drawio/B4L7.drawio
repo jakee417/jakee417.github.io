@@ -1,25 +1,72 @@
-<mxfile host="65bd71144e" pages="2">
+<mxfile host="65bd71144e">
     <diagram id="JDI_gfJpjxLJ_JYhKjTu" name="Page-1">
-        <mxGraphModel dx="967" dy="723" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
+        <mxGraphModel dx="1433" dy="809" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="Lecture 7 - Falling into a Black Hole" style="swimlane;fontFamily=Comic Sans MS;fontSize=18;align=left;fillColor=#f8cecc;strokeColor=#b85450;fillStyle=auto;rounded=1;startSize=30;labelBackgroundColor=none;swimlaneFillColor=#FFCCCC;gradientColor=none;gradientDirection=south;glass=0;shadow=0;textShadow=0;labelBorderColor=none;collapsible=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
-                    <mxGeometry x="20" y="11" width="800" height="49" as="geometry"/>
+                <mxCell id="2" value="Lecture 7 - Falling into a Black Hole" style="swimlane;fontFamily=Comic Sans MS;fontSize=18;align=left;fillColor=#f8cecc;strokeColor=#b85450;fillStyle=auto;rounded=1;startSize=30;labelBackgroundColor=none;swimlaneFillColor=#FFCCCC;gradientColor=none;gradientDirection=south;glass=0;shadow=0;textShadow=0;labelBorderColor=none;collapsible=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="11" width="780" height="1029" as="geometry"/>
                 </mxCell>
-                <mxCell id="b4l7-eqn-1" value="Schwarzchild metric" style="swimlane;fontFamily=Comic Sans MS;fontSize=18;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;fillStyle=auto;rounded=1;startSize=30;swimlaneFillColor=#E6E6E6;collapsible=0;enumerate=0;comic=0;moveCells=0;fixedWidth=1;resizable=1;movableLabel=0;backgroundOutline=0;container=1;autosize=0;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
-                    <mxGeometry x="20" y="220" width="500" height="130" as="geometry">
+                <mxCell id="b4l7-concept-1" value="&lt;p&gt;&lt;font face=&quot;Comic Sans MS&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;Schwarzchild metric&lt;/b&gt;&lt;br&gt;describes the geometry of space time caused by the presence of a black hole&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;" style="text;strokeColor=#82b366;align=center;fillColor=#d5e8d4;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=11;fontColor=default;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="70" width="290" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="b4l7-eqn-1" value="Schwarzchild metric" style="swimlane;fontFamily=Comic Sans MS;fontSize=18;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;fillStyle=auto;rounded=1;startSize=30;swimlaneFillColor=#E6E6E6;collapsible=0;enumerate=0;comic=0;moveCells=0;fixedWidth=1;resizable=1;movableLabel=0;backgroundOutline=0;container=1;autosize=0;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="210" width="510" height="120" as="geometry">
                         <mxRectangle x="40" y="150" width="250" height="40" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="b4l7-eqn-1-text" value="`d\tau^2 = (1 - \frac{2MG}{r&#39;}) dt&#39;^2 - (\frac{1}{1 - \frac{2MG}{r&#39;}}) dr&#39;^2 - r&#39;^2d\Omega^2`" style="text;html=1;align=left;verticalAlign=middle;resizable=1;points=[];autosize=0;strokeColor=none;fillColor=none;fontSize=18;fontFamily=Comic Sans MS;overflow=visible;portConstraint=none;connectable=1;autosizeGrid=1;backgroundOutline=0;recursiveResize=0;allowArrows=1;movable=1;rotatable=1;deletable=1;editable=1;locked=0;" vertex="1" parent="b4l7-eqn-1">
-                    <mxGeometry x="2.5" y="35" width="397.5" height="90" as="geometry"/>
+                <mxCell id="b4l7-eqn-1-text" value="`d\tau^2 = (1 - \frac{2MG}{r&#39;}) dt&#39;^2 - (\frac{1}{1 - \frac{2MG}{r&#39;}}) dr&#39;^2 - r&#39;^2d\Omega^2`" style="text;html=1;align=left;verticalAlign=middle;resizable=1;points=[];autosize=0;strokeColor=none;fillColor=none;fontSize=18;fontFamily=Comic Sans MS;overflow=visible;portConstraint=none;connectable=1;autosizeGrid=1;backgroundOutline=0;recursiveResize=0;allowArrows=1;movable=1;rotatable=1;deletable=1;editable=1;locked=0;" parent="b4l7-eqn-1" vertex="1">
+                    <mxGeometry x="8" y="35" width="485" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="b4l7-edge-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="b4l7-concept-1" target="b4l7-eqn-1">
+                <mxCell id="b4l7-eqn-2" value="Schwarzchild radius" style="swimlane;fontFamily=Comic Sans MS;fontSize=18;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;fillStyle=auto;rounded=1;startSize=30;swimlaneFillColor=#E6E6E6;collapsible=0;enumerate=0;comic=0;moveCells=0;fixedWidth=1;resizable=1;movableLabel=0;backgroundOutline=0;container=1;autosize=0;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="210" width="180" height="90" as="geometry">
+                        <mxRectangle x="40" y="150" width="250" height="40" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b4l7-eqn-2-text" value="`R_S = 2MG`" style="text;html=1;align=left;verticalAlign=middle;resizable=1;points=[];autosize=0;strokeColor=none;fillColor=none;fontSize=18;fontFamily=Comic Sans MS;overflow=visible;portConstraint=none;connectable=1;autosizeGrid=1;backgroundOutline=0;recursiveResize=0;allowArrows=1;movable=1;rotatable=1;deletable=1;editable=1;locked=0;" parent="b4l7-eqn-2" vertex="1">
+                    <mxGeometry x="15" y="32" width="140" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="b4l7-eqn-3" value="Schwarzchild metric (universal form)" style="swimlane;fontFamily=Comic Sans MS;fontSize=18;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;fillStyle=auto;rounded=1;startSize=30;swimlaneFillColor=#E6E6E6;collapsible=0;enumerate=0;comic=0;moveCells=0;fixedWidth=1;resizable=1;movableLabel=0;backgroundOutline=0;container=1;autosize=0;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="370" width="720" height="120" as="geometry">
+                        <mxRectangle x="40" y="150" width="250" height="40" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b4l7-eqn-3-text" value="`d\tau^2 = R_S^2[(1 - \frac{1}{r}) dt^2 - (\frac{1}{1 - \frac{1}{r}}) dr^2 - r^2 d\Omega^2]`" style="text;html=1;align=left;verticalAlign=middle;resizable=1;points=[];autosize=0;strokeColor=none;fillColor=none;fontSize=18;fontFamily=Comic Sans MS;overflow=visible;portConstraint=none;connectable=1;autosizeGrid=1;backgroundOutline=0;recursiveResize=0;allowArrows=1;movable=1;rotatable=1;deletable=1;editable=1;locked=0;" parent="b4l7-eqn-3" vertex="1">
+                    <mxGeometry x="8" y="35" width="690" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="b4l7-concept-2" value="&lt;p&gt;&lt;font face=&quot;Comic Sans MS&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;Curvature (review)&lt;/b&gt;&lt;br&gt;Curvature is analogous to tidal forces. Tidal forces are the effect of curvature.&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;" style="text;strokeColor=#82b366;align=center;fillColor=#d5e8d4;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=11;fontColor=default;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="560" width="290" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="b4l7-eqn-4" value="Curvature Tensor" style="swimlane;fontFamily=Comic Sans MS;fontSize=18;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;fillStyle=auto;rounded=1;startSize=30;swimlaneFillColor=#E6E6E6;collapsible=0;enumerate=0;comic=0;moveCells=0;fixedWidth=1;resizable=1;movableLabel=0;backgroundOutline=0;container=1;autosize=0;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="720" width="720" height="150" as="geometry">
+                        <mxRectangle x="40" y="150" width="250" height="40" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b4l7-eqn-4-text" value="`\mathcal R_{srn}^t = \partial_r\Gamma_{sn}^t - \partial_s \Gamma_{rn}^t + \Gamma_{sn}^p \Gamma_{pr}^t - \Gamma_{rn}^p \Gamma_{ps}^t`" style="text;html=1;align=left;verticalAlign=middle;resizable=1;points=[];autosize=0;strokeColor=none;fillColor=none;fontSize=18;fontFamily=Comic Sans MS;overflow=visible;portConstraint=none;connectable=1;autosizeGrid=1;backgroundOutline=0;recursiveResize=0;allowArrows=1;movable=1;rotatable=1;deletable=1;editable=1;locked=0;" parent="b4l7-eqn-4" vertex="1">
+                    <mxGeometry x="8" y="35" width="690" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="b4l7-eqn-5" value="Christoffel symbol" style="swimlane;fontFamily=Comic Sans MS;fontSize=18;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;fillStyle=auto;rounded=1;startSize=30;swimlaneFillColor=#E6E6E6;collapsible=0;enumerate=0;comic=0;moveCells=0;fixedWidth=1;resizable=1;movableLabel=0;backgroundOutline=0;container=1;autosize=0;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="560" width="330" height="120" as="geometry">
+                        <mxRectangle x="40" y="150" width="250" height="40" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b4l7-eqn-5-text" value="`\Gamma_{mn}^t = \frac{1}{2}[\partial_n g_{rm} + \partial_m g_{rn} - \partial_r g_{mn}]`" style="text;html=1;align=left;verticalAlign=middle;resizable=1;points=[];autosize=0;strokeColor=none;fillColor=none;fontSize=18;fontFamily=Comic Sans MS;overflow=visible;portConstraint=none;connectable=1;autosizeGrid=1;backgroundOutline=0;recursiveResize=0;allowArrows=1;movable=1;rotatable=1;deletable=1;editable=1;locked=0;" parent="b4l7-eqn-5" vertex="1">
+                    <mxGeometry x="8" y="35" width="310" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="b4l7-edge-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" source="b4l7-concept-1" target="b4l7-eqn-1" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="b4l7-concept-1" value="&lt;p&gt;&lt;font face=&quot;Comic Sans MS&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;Schwarzchild metric&lt;/b&gt;&lt;br&gt;describes the geometry of space time caused by the presence of a black hole&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;" style="text;strokeColor=#82b366;align=center;fillColor=#d5e8d4;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=11;fontColor=default;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
-                    <mxGeometry x="115" y="71" width="310" height="130" as="geometry"/>
+                <mxCell id="b4l7-edge-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" source="b4l7-eqn-1" target="b4l7-eqn-3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="b4l7-edge-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" source="b4l7-eqn-2" target="b4l7-eqn-3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="b4l7-edge-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" source="b4l7-concept-2" target="b4l7-eqn-4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="b4l7-edge-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" source="b4l7-eqn-5" target="b4l7-eqn-4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
