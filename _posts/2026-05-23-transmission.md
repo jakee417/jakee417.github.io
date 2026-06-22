@@ -101,7 +101,7 @@ Now we can calculate the link budget:
 $$
 \begin{align}
 P_{RX} (\text{dBm}) &= P_{TX} (\text{dBm}) + G (\text{dB}) - L (\text{dB}) \\
-&= P_{TX} + G_{TX} - L_{TX} - L_{FS} - G_{RX} - L_{RX} \\
+&= P_{TX} + G_{TX} - L_{TX} - L_{FS} + G_{RX} - L_{RX} \\
 &= P_{TX} + 2 G_{TX} - 2L_{TX} - L_{FS} \\
 &= 22 + 2 * 5.8 - 2 * 4 - 105.615 \\
 &\approx -80 (\text{dBm})
