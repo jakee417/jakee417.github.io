@@ -5,7 +5,7 @@ date: 2026-10-01 21:00:00 -0700
 categories: [Math]
 tags: [mathematics]
 math: true
-mermaid: false
+mermaid: true
 markdown: kramdown
 ---
 
@@ -42,6 +42,16 @@ H(p) = \frac{1}{2}(1) + \frac{1}{4}(2) + \frac{1}{8}(3) + \frac{1}{8}(3) = 1.75 
 $$
 
 And the [Huffman code](https://en.wikipedia.org/wiki/Huffman_coding) $a = 0$, $b = 10$, $c = 110$, $d = 111$ has lengths $(1,2,3,3)$, achieving $\mathbb{E}[l] = 1.75$ exactly.
+
+```mermaid
+flowchart TD
+    R(( )) -->|0| A[a = 0]
+    R -->|1| X(( ))
+    X -->|0| B[b = 10]
+    X -->|1| Y(( ))
+    Y -->|0| C[c = 110]
+    Y -->|1| D[d = 111]
+```
 
 ## KL Divergence
 
