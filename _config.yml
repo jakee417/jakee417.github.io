@@ -168,6 +168,9 @@ collections:
   tabs:
     output: true
     sort_by: order
+  drafts:
+    output: true
+    permalink: /drafts/:title/
 
 defaults:
   - scope:
@@ -183,6 +186,7 @@ defaults:
   - scope:
       path: _drafts
     values:
+      layout: post
       comments: false
   - scope:
       path: ""
