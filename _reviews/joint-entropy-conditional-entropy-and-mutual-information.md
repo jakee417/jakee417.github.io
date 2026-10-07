@@ -36,6 +36,18 @@ $$
 
 Describe $Y$ first, then describe what remains of $X$ once $Y$ is known.
 
+<details><summary>Proof</summary>
+$$
+\begin{aligned}
+H(X, Y) &= -\sum_{x, y} p(x, y) \log_2 p(x, y) \\
+&= -\sum_{x, y} p(x, y) \left[ \log_2 p(y) + \log_2 p(x \mid y) \right] \\
+&= -\sum_y p(y) \log_2 p(y) - \sum_{x, y} p(x, y) \log_2 p(x \mid y) \\
+&= H(Y) + H(X \mid Y)
+\end{aligned}
+$$
+The second line splits $\log_2 p(x, y) = \log_2 p(y) + \log_2 p(x \mid y)$, and the third marginalizes $\sum_x p(x, y) = p(y)$ in the first term.
+</details>
+
 ## Conditional Entropy
 
 Each value of $Y$ induces a posterior distribution on $X$, and the conditional entropy averages the posterior entropies:
@@ -66,7 +78,25 @@ $$
 \boxed{I(X; Y) = H(X) + H(Y) - H(X, Y) = D_{KL}\big(p(x, y) \,\|\, p(x)p(y)\big)}
 $$
 
-The KL form ties back to the previous post: $p(x)p(y)$ is the joint distribution the pair would have if $X$ and $Y$ were independent, so mutual information is the excess cost of coding the pair with a code built on the independence assumption. By Gibbs' inequality, $I(X; Y) \geq 0$, with equality exactly when $X$ and $Y$ are independent, and $I(X; Y) \leq \min(H(X), H(Y))$, since two variables cannot share more uncertainty than either contains. The pointwise term $i(x; y) = \log_2 \frac{p(x, y)}{p(x)p(y)}$ can be negative for a single pair, when seeing $y$ makes $x$ less likely than it was before; only the average is guaranteed non-negative.
+<details><summary>Proof</summary>
+The first equality is the chain rule: $H(X) + H(Y) - H(X, Y) = H(X) - H(X \mid Y)$, since $H(X, Y) = H(Y) + H(X \mid Y)$. For the KL form, expand the definition and marginalize $\sum_y p(x, y) = p(x)$ and $\sum_x p(x, y) = p(y)$:
+
+$$
+\begin{aligned}
+D_{KL}\big(p(x, y) \,\|\, p(x)p(y)\big) &= \sum_{x, y} p(x, y) \log_2 \frac{p(x, y)}{p(x)p(y)} \\
+&= -H(X, Y) - \sum_{x, y} p(x, y) \log_2 p(x) - \sum_{x, y} p(x, y) \log_2 p(y) \\
+&= -H(X, Y) + H(X) + H(Y)
+\end{aligned}
+$$
+</details>
+
+The KL form ties back to the previous post: $p(x)p(y)$ is the joint distribution the pair would have if $X$ and $Y$ were independent, so mutual information is the excess cost of coding the pair with a code built on the independence assumption. By Gibbs' inequality, $I(X; Y) \geq 0$, with equality exactly when $X$ and $Y$ are independent, and $I(X; Y) \leq \min(H(X), H(Y))$, since two variables cannot share more uncertainty than either contains.
+
+<details><summary>Proof</summary>
+Gibbs' inequality applied to the KL form gives $I(X; Y) \geq 0$, with equality exactly when $p(x, y) = p(x)p(y)$ for all $x, y$, i.e. independence. In particular $H(X \mid Y) \leq H(X)$: conditioning never hurts on average. And $I(X; Y) = H(X) - H(X \mid Y) \leq H(X)$ since $H(X \mid Y) \geq 0$; symmetrically $I(X; Y) \leq H(Y)$, hence $I(X; Y) \leq \min(H(X), H(Y))$.
+</details>
+
+The pointwise term $i(x; y) = \log_2 \frac{p(x, y)}{p(x)p(y)}$ can be negative for a single pair, when seeing $y$ makes $x$ less likely than it was before; only the average is guaranteed non-negative.
 
 ## What It Buys
 
@@ -76,11 +106,35 @@ $$
 I(X; Y, Z) = I(X; Z) + I(X; Y \mid Z)
 $$
 
+<details><summary>Proof</summary>
+With $I(X; Y \mid Z) = H(X \mid Z) - H(X \mid Y, Z)$, add and subtract $H(X \mid Z)$:
+
+$$
+I(X; Y, Z) = H(X) - H(X \mid Y, Z) = \left[ H(X) - H(X \mid Z) \right] + \left[ H(X \mid Z) - H(X \mid Y, Z) \right] = I(X; Z) + I(X; Y \mid Z)
+$$
+</details>
+
 so each new observation is credited only with the uncertainty it removes beyond what was already known. And if $X \rightarrow Y \rightarrow Z$ is a Markov chain, the [data processing inequality](https://en.wikipedia.org/wiki/Data_processing_inequality) gives $I(X; Z) \leq I(X; Y)$: summarizing, re-encoding, or corrupting $Y$ cannot create information about $X$ that was not already there.
+
+<details><summary>Proof</summary>
+Expand $I(X; Y, Z)$ with the chain rule in both orders:
+
+$$
+I(X; Z) + I(X; Y \mid Z) = I(X; Y, Z) = I(X; Y) + I(X; Z \mid Y)
+$$
+
+The Markov condition $X \rightarrow Y \rightarrow Z$ says $X$ and $Z$ are conditionally independent given $Y$, so $I(X; Z \mid Y) = 0$, leaving $I(X; Y) = I(X; Z) + I(X; Y \mid Z) \geq I(X; Z)$, since conditional mutual information is non-negative by the same Gibbs argument conditioned on each value of $Z$.
+</details>
 
 ```mermaid
 flowchart LR
     X[X] --> Y[Y] --> Z[Z]
 ```
 
-The noisy version of the running example shows the inequality in action. Send $B$ through a channel that flips it with probability $\varepsilon$, and call the received bit $R$. Then $I(B; R) = 1 - h_2(\varepsilon)$, where $h_2$ is the binary entropy function. At $\varepsilon = 0.1$ the receiver still gets $0.531$ bits of the original $1$ bit; at $\varepsilon = \frac{1}{2}$ the received bit is independent of the sent bit and $I(B; R) = 0$. How much of $X$ survives a noisy $Y$ is the question that channel coding answers.
+The noisy version of the running example shows the inequality in action. Send $B$ through a channel that flips it with probability $\varepsilon$, and call the received bit $R$. Then $I(B; R) = 1 - h_2(\varepsilon)$, where $h_2$ is the binary entropy function. At $\varepsilon = 0.1$ the receiver still gets $0.531$ bits of the original $1$ bit; at $\varepsilon = \frac{1}{2}$ the received bit is independent of the sent bit and $I(B; R) = 0$.
+
+<details><summary>Computation</summary>
+The channel is symmetric and $B$ is a fair bit, so $R$ is also a fair bit and $H(R) = 1$. Given $B$, the received bit is $B$ flipped with probability $\varepsilon$, so $H(R \mid B) = h_2(\varepsilon)$. Then $I(B; R) = H(R) - H(R \mid B) = 1 - h_2(\varepsilon)$, and $h_2(0.1) \approx 0.469$ gives $1 - 0.469 = 0.531$ bits.
+</details>
+
+How much of $X$ survives a noisy $Y$ is the question that channel coding answers.
