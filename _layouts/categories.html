@@ -136,3 +136,28 @@ layout: page
     {% assign group_index = group_index | plus: 1 %}
   {% endif %}
 {% endfor %}
+
+<!-- Not a real category: links to the drafts index, styled like the leaf categories above. -->
+<div class="card categories">
+  <div class="card-header d-flex justify-content-between hide-border-bottom">
+    <span class="ms-2">
+      <i class="far fa-folder fa-fw"></i>
+      <a href="{{ '/drafts/' | relative_url }}" class="mx-2">Drafts</a>
+
+      {% assign drafts_size = site.reviews | size %}
+      <span class="text-muted small font-weight-light">
+        {{ drafts_size }}
+        {% if drafts_size > 1 %}
+          {{ site.data.locales[lang].categories.post_measure.plural | default: site.data.locales[lang].categories.post_measure }}
+        {% else %}
+          {{ site.data.locales[lang].categories.post_measure.singular | default: site.data.locales[lang].categories.post_measure }}
+        {% endif %}
+      </span>
+    </span>
+
+    <span data-bs-toggle="collapse" class="category-trigger hide-border-bottom disabled">
+      <i class="fas fa-fw fa-angle-right"></i>
+    </span>
+  </div>
+</div>
+<!-- .card -->
