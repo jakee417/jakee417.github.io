@@ -188,6 +188,7 @@ defaults:
     values:
       layout: post
       comments: false
+      toc: true # Display TOC column in posts.
   - scope:
       path: ""
       type: tabs # see `site.collections`
