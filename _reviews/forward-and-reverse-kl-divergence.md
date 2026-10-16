@@ -63,7 +63,7 @@ $$
 p^*(y) = \frac{\pi_{ref}(y) \exp(r(y)/\beta)}{Z}, \qquad Z = \sum_{y'} \pi_{ref}(y') \exp(r(y')/\beta)
 $$
 
-$\pi_{ref}$ is not itself the target; together with $r$ it defines $p^*$. Then:
+$\pi_{ref}$ is not itself the target; together with $r$ it defines the tilted target. Then:
 
 $$
 \boxed{J(\theta) = -\beta D_{KL}(\pi_\theta\|p^*) + \beta \log Z}
@@ -80,7 +80,7 @@ $$
 Multiplying by $-\beta$ and adding $\beta \log Z$ gives $J(\theta)$.
 </details>
 
-$\beta \log Z$ does not depend on $\theta$, so maximizing reward with a KL penalty is minimizing the **reverse KL** to $p^*$. The model is charged only on responses it generates, and charged for generating responses that $p^*$ rates low.
+$\beta \log Z$ does not depend on $\theta$, so maximizing reward with a KL penalty is minimizing the **reverse KL** to that tilted target. The model is charged only on responses it generates, and charged for generating responses the target rates low.
 
 ## On-Policy Distillation
 
