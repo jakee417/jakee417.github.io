@@ -98,7 +98,7 @@ Gibbs' inequality applied to the KL form gives $I(X; Y) \geq 0$, with equality e
 
 The pointwise term $i(x; y) = \log_2 \frac{p(x, y)}{p(x)p(y)}$ can be negative for a single pair, when seeing $y$ makes $x$ less likely than it was before; only the average is guaranteed non-negative.
 
-## What It Buys
+## Chain Rule and Data Processing Inequality
 
 Mutual information chains the same way entropy does. For a second observation $Z$:
 
