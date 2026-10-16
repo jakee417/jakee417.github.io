@@ -3,7 +3,7 @@ title: Forward and Reverse KL Divergence
 author: jake
 date: 2026-10-15 23:28:00 -0700
 categories: [Math]
-tags: [mathematics]
+tags: [mathematics, ai-assisted]
 math: true
 mermaid: true
 markdown: kramdown
