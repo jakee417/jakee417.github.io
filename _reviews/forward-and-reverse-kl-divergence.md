@@ -107,7 +107,9 @@ These are the same two inclusions as in the support box above, read in the other
 
 The two directions are, up to constants, the losses of the standard post-training methods. What changes between methods is which divergence is optimized, and who supplies the samples it is averaged over.
 
-**SFT.** The training data is a fixed dataset of tokens drawn from $p$, and the loss is their negative log likelihood under the model:
+### SFT
+
+The training data is a fixed dataset of tokens drawn from $p$, and the loss is their negative log likelihood under the model:
 
 $$
 \mathcal{L}_{SFT} = -\sum_y p(y) \log \pi_\theta(y)
@@ -121,7 +123,9 @@ $$
 
 $H(p)$ does not depend on $\theta$, so SFT is forward KL minimization. The pull is toward $p$ regardless of where the model starts: the recall direction, covering the target at the cost of the model's prior modes, which is the proposed mechanism for its forgetting.
 
-**KL-Regularized RL.** The objective maximizes expected reward subject to staying near a frozen reference policy $\pi_{ref}$:
+### KL-Regularized RL
+
+The objective maximizes expected reward subject to staying near a frozen reference policy $\pi_{ref}$:
 
 $$
 J(\theta) = \sum_y \pi_\theta(y)\, r(y) - \beta D_{KL}(\pi_\theta\|\pi_{ref})
@@ -152,7 +156,9 @@ Multiplying by $-\beta$ and adding $\beta \log Z$ gives $J(\theta)$.
 
 $\beta \log Z$ does not depend on $\theta$, so maximizing reward with a KL penalty is minimizing the **reverse KL** to that tilted target. The model is charged only on responses it generates, and charged for generating responses the target rates low.
 
-**On-Policy Distillation.** This keeps the teacher of SFT but the sampling of RL: responses are drawn from the student $\pi_\theta$ and scored by a teacher $\pi_T$. With the reverse KL loss, at sequence level:
+### On-Policy Distillation
+
+On-policy distillation keeps the teacher of SFT but the sampling of RL: responses are drawn from the student $\pi_\theta$ and scored by a teacher $\pi_T$. With the reverse KL loss, at sequence level:
 
 $$
 \mathcal{L}_{OPD} = \sum_y \pi_\theta(y) \left[ \log \pi_\theta(y) - \log \pi_T(y) \right] = D_{KL}(\pi_\theta\|\pi_T)
@@ -160,7 +166,9 @@ $$
 
 No equivalence is needed; the loss is reverse KL by definition. The difference from RL is the signal: a teacher log probability for each generated token, instead of a scalar reward and a reference policy.
 
-**Off Policy.** The data is drawn from some other distribution $\mu$ (a teacher's samples, an older checkpoint, a fixed dataset) while the model being trained is $\pi_\theta$. Matching the model to that data by likelihood gives:
+### Off Policy
+
+The data is drawn from some other distribution $\mu$ (a teacher's samples, an older checkpoint, a fixed dataset) while the model being trained is $\pi_\theta$. Matching the model to that data by likelihood gives:
 
 $$
 -\sum_y \mu(y) \log \pi_\theta(y) = H(\mu) + D_{KL}(\mu\|\pi_\theta)
