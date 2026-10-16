@@ -24,8 +24,19 @@ $$
 Expanding the [KL divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence) in this direction gives the cross-entropy decomposition from the earlier post:
 
 $$
-D_{KL}(p\|\pi_\theta) = \sum_y p(y) \log \frac{p(y)}{\pi_\theta(y)} = -H(p) - \sum_y p(y) \log \pi_\theta(y) \implies \boxed{\mathcal{L}_{SFT} = H(p) + D_{KL}(p\|\pi_\theta)}
+\boxed{\mathcal{L}_{SFT} = H(p) + D_{KL}(p\|\pi_\theta)}
 $$
+
+<details><summary>Proof</summary>
+$$
+\begin{aligned}
+D_{KL}(p\|\pi_\theta) &= \sum_y p(y) \log \frac{p(y)}{\pi_\theta(y)} \\
+&= \sum_y p(y) \log p(y) - \sum_y p(y) \log \pi_\theta(y) \\
+&= -H(p) + \mathcal{L}_{SFT}
+\end{aligned}
+$$
+The first sum is the negative entropy and the second is the SFT loss, so rearranging gives the boxed identity.
+</details>
 
 $H(p)$ does not depend on $\theta$, so minimizing the SFT loss is minimizing the **forward KL** $D_{KL}(p\|\pi_\theta)$.
 
@@ -36,8 +47,19 @@ The penalty is visible term by term. Fix $y$ with $p(y) > 0$ and let $\pi_\theta
 Swap the arguments:
 
 $$
-D_{KL}(\pi_\theta\|p) = \sum_y \pi_\theta(y) \log \frac{\pi_\theta(y)}{p(y)} = -H(\pi_\theta) - \sum_y \pi_\theta(y) \log p(y)
+\boxed{D_{KL}(\pi_\theta\|p) = -H(\pi_\theta) - \sum_y \pi_\theta(y) \log p(y)}
 $$
+
+<details><summary>Proof</summary>
+$$
+\begin{aligned}
+D_{KL}(\pi_\theta\|p) &= \sum_y \pi_\theta(y) \log \frac{\pi_\theta(y)}{p(y)} \\
+&= \sum_y \pi_\theta(y) \log \pi_\theta(y) - \sum_y \pi_\theta(y) \log p(y) \\
+&= -H(\pi_\theta) - \sum_y \pi_\theta(y) \log p(y)
+\end{aligned}
+$$
+The first sum is the negative entropy of the model, which gives the boxed form.
+</details>
 
 Both terms now depend on $\theta$; neither is a constant to discard. The expectation is under $\pi_\theta$ itself. If $\pi_\theta(y) \approx 0$, the term for $y$ is $\approx 0$ whatever $p(y)$ is, so dropping a mode of $p$ costs nothing directly. If $\pi_\theta(y) > 0$ where $p(y) = 0$, the term is infinite. The support constraint is exactly reversed:
 
