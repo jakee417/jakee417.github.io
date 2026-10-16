@@ -182,6 +182,8 @@ $$
 
 The weights grow as the model drifts away from $\mu$, which is why practical methods clip them, or refresh the data and stay near on-policy.
 
+## Summary
+
 The direction of a KL divergence is a statement about who supplies the average. Forward KL averages over the target, so the model must become the target everywhere the target has mass. Reverse KL averages over the model, so the model must only be target-like where it already goes. That gives covering versus seeking, and is one proposed mechanism for SFT forgetting more than RL. It is not the whole story: the experiments discussed by Vet and Hao find that on-policy data itself reduces forgetting even when the KL penalty is weakened or its direction changed, so the sampling distribution is a separate mechanism from the direction of the divergence.
 
 ## References
