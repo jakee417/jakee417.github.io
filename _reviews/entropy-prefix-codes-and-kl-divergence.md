@@ -3,7 +3,7 @@ title: Entropy, Prefix Codes, and KL Divergence
 author: jake
 date: 2026-10-01 21:00:00 -0700
 categories: [Math]
-tags: [mathematics]
+tags: [mathematics, ai-assisted]
 math: true
 mermaid: true
 markdown: kramdown

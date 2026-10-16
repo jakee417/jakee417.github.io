@@ -3,7 +3,7 @@ title: Joint Entropy, Conditional Entropy, and Mutual Information
 author: jake
 date: 2026-10-04 00:09:00 -0700
 categories: [Math]
-tags: [mathematics]
+tags: [mathematics, ai-assisted]
 math: true
 mermaid: true
 markdown: kramdown
