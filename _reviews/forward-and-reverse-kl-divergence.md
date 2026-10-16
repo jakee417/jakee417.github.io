@@ -71,6 +71,40 @@ Within the support of $p$, the average is weighted by what $\pi_\theta$ actually
 
 If $\pi_\theta$ can represent $p$ exactly, there is no disagreement: both divergences are $0$ at $\pi_\theta = p$ and nowhere else. The directions differ only in which errors an imperfect model is charged for.
 
+## Precision and Recall
+
+The same asymmetry is the precision/recall tradeoff, seen by scoring the model on sampled tokens. Sample tokens from the true distribution and ask how much probability the model gives them, or sample tokens from the model and ask how much probability the truth gives them. The expected log scores are:
+
+$$
+\boxed{\mathbb{E}_{y \sim p}[\log \pi_\theta(y)] = -H(p) - D_{KL}(p\|\pi_\theta), \qquad \mathbb{E}_{y \sim \pi_\theta}[\log p(y)] = -H(\pi_\theta) - D_{KL}(\pi_\theta\|p)}
+$$
+
+In the first identity $H(p)$ does not depend on $\theta$, so maximizing the expected log probability of tokens drawn from the true distribution is exactly minimizing forward KL. That is the soft form of recall: the audit runs over tokens the truth produces, and a true token the model rates near zero drags the average down without bound. The second identity is the precision side: reverse KL is the same kind of audit run over tokens the model produces, where a produced token the truth rates near zero is the expensive one, together with the model's own entropy term.
+
+Threshold those scores at zero, produced or not produced, and the soft form becomes a statement about supports. Let $A$ be the responses the target can produce and $B$ the responses the model can produce:
+
+$$
+A = \mathrm{supp}\, p, \qquad B = \mathrm{supp}\, \pi_\theta
+$$
+
+Weighting each set by its own distribution gives the two quantities:
+
+$$
+\mathrm{Recall} = p(B), \qquad \mathrm{Precision} = \pi_\theta(A)
+$$
+
+$p(B)$ is the share of the target's mass that the model can reach at all, and $\pi_\theta(A)$ is the share of the model's mass that lands on the target. Then:
+
+$$
+\boxed{\mathrm{Recall} = 1 \iff A \subseteq B, \qquad \mathrm{Precision} = 1 \iff B \subseteq A}
+$$
+
+<details><summary>Proof</summary>
+$p(B) = 1$ exactly when $p$ assigns no mass outside $B$, i.e. when every response with $p(y) > 0$ has $\pi_\theta(y) > 0$, which is $A \subseteq B$. The precision statement is the same argument with the two distributions exchanged: $\pi_\theta(A) = 1$ exactly when the model assigns no mass outside $A$, which is $B \subseteq A$.
+</details>
+
+These are the same two inclusions as in the support box above, read in the other direction. Perfect recall is exactly the condition that no forward term is infinite, and perfect precision is exactly the condition that no reverse term is infinite. Forward KL is the recall direction: it is audited on target draws, so the expensive error is a miss. Reverse KL is the precision direction: it is audited on model draws, so the expensive error is a false production. A model that cannot match $p$ exactly is choosing which error to pay.
+
 ## KL-Regularized RL
 
 The KL-regularized RL objective maximizes expected reward subject to staying near a frozen reference policy $\pi_{ref}$:
