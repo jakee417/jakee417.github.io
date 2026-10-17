@@ -9,7 +9,7 @@ mermaid: true
 markdown: kramdown
 ---
 
-In [Entropy, Prefix Codes, and KL Divergence]({% link _reviews/entropy-prefix-codes-and-kl-divergence.md %}), $D_{KL}(p\|q)$ is the expected excess cost of coding a $p$ sequence with a $q$ code. It is asymmetric, and the asymmetry is the subject here. Let $p$ be a target distribution over responses $y$ and $\pi_\theta$ a model. The first argument of $D_{KL}$ is the distribution the expectation is taken over, so swapping the arguments changes what $\pi_\theta$ is forced to do. Written as expectations:
+In [Entropy, Prefix Codes, and KL Divergence]({% link _posts/2026-10-01-entropy-prefix-codes-and-kl-divergence.md %}), $D_{KL}(p\|q)$ is the expected excess cost of coding a $p$ sequence with a $q$ code. It is asymmetric, and the asymmetry is the subject here. Let $p$ be a target distribution over responses $y$ and $\pi_\theta$ a model. The first argument of $D_{KL}$ is the distribution the expectation is taken over, so swapping the arguments changes what $\pi_\theta$ is forced to do. Written as expectations:
 
 $$
 D_{KL}(p\|\pi_\theta) = \mathbb{E}_{y \sim p}\left[\log \frac{p(y)}{\pi_\theta(y)}\right]
@@ -31,7 +31,7 @@ $$
 D_{KL}(p\|\pi_\theta) = \sum_y p(y) \log \frac{p(y)}{\pi_\theta(y)}
 $$
 
-Expanding gives the cross-entropy decomposition from the [earlier post]({% link _reviews/entropy-prefix-codes-and-kl-divergence.md %}):
+Expanding gives the cross-entropy decomposition from the [earlier post]({% link _posts/2026-10-01-entropy-prefix-codes-and-kl-divergence.md %}):
 
 $$
 \boxed{D_{KL}(p\|\pi_\theta) = -H(p) - \sum_y p(y) \log \pi_\theta(y)}
