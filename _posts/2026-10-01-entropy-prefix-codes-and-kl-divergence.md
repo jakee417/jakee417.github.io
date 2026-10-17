@@ -7,6 +7,9 @@ tags: [mathematics, ai-assisted]
 math: true
 mermaid: true
 markdown: kramdown
+image:
+  path: /assets/img/custom/prefix-tree.png
+  alt: Prefix code tree for p = (1/2, 1/4, 1/8, 1/8), with codewords a = 0, b = 10, c = 110, d = 111
 ---
 
 Given a distribution $p$ over a finite alphabet, a [prefix code](https://en.wikipedia.org/wiki/Prefix_code) assigns each symbol a binary code word such that no code word is a prefix of another code word. The expected code word length of any such code is bounded below by the [entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory)) of $p$. If the code is instead constructed from a different distribution $q$, the expected length increases by exactly the [KL divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence) $D_{KL}(p\|q)$. I have used these quantities before ([Least Action vs. Least Squares]({% link _posts/2024-02-04-least-action-least-squares.md %})), but never written down where the coding interpretation comes from.

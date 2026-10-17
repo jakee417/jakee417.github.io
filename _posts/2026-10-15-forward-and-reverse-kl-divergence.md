@@ -7,6 +7,9 @@ tags: [mathematics, ai-assisted]
 math: true
 mermaid: true
 markdown: kramdown
+image:
+  path: /assets/img/custom/kl-gaussians.png
+  alt: Two one-dimensional Gaussians, the target p and the model, with their overlap shaded
 ---
 
 In [Entropy, Prefix Codes, and KL Divergence]({% link _posts/2026-10-01-entropy-prefix-codes-and-kl-divergence.md %}), $D_{KL}(p\|q)$ is the expected excess cost of coding a $p$ sequence with a $q$ code. It is asymmetric, and the asymmetry is the subject here. Let $p$ be a target distribution over responses $y$ and $\pi_\theta$ a model. The first argument of $D_{KL}$ is the distribution the expectation is taken over, so swapping the arguments changes what $\pi_\theta$ is forced to do. Written as expectations:
