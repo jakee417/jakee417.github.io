@@ -86,36 +86,34 @@ If $\pi_\theta$ can represent $p$ exactly, there is no disagreement: both diverg
 
 ## Token Precision and Recall
 
-The same asymmetry is the precision/recall tradeoff, seen by scoring the model on sampled tokens. Sample tokens from the true distribution and ask how much probability the model gives them, or sample tokens from the model and ask how much probability the truth gives them. The expected log scores are:
+The same asymmetry is the precision/recall tradeoff. Read $p$ as a teacher and $\pi_\theta$ as a student, both generating tokens. Let $A$ be the tokens the teacher can produce and $B$ the tokens the student can produce:
 
 $$
-\boxed{\mathbb{E}_{y \sim p}[\log \pi_\theta(y)] = -H(p) - D_{KL}(p\|\pi_\theta)}
-
+A = \mathrm{supp}\, p
 $$
 
 $$
-\boxed{\mathbb{E}_{y \sim \pi_\theta}[\log p(y)] = -H(\pi_\theta) - D_{KL}(\pi_\theta\|p)}
+B = \mathrm{supp}\, \pi_\theta
 $$
 
-In the first identity $H(p)$ does not depend on $\theta$, so maximizing the expected log probability of tokens drawn from the true distribution is exactly minimizing forward KL. That is the soft form of recall: the audit runs over tokens the truth produces, and a true token the model rates near zero drags the average down without bound. The second identity is the precision side: reverse KL is the same kind of audit run over tokens the model produces, where a produced token the truth rates near zero is the expensive one, together with the model's own entropy term.
-
-Threshold those scores at zero, produced or not produced, and the soft form becomes a statement about supports. Read $y$ as a single token: let $A$ be the tokens the target can produce and $B$ the tokens the model can produce:
+Precision and recall weight each set by the other distribution:
 
 $$
-A = \mathrm{supp}\, p, \qquad B = \mathrm{supp}\, \pi_\theta
+\mathrm{Precision} = \pi_\theta(A)
 $$
 
-Weighting each set by its own distribution gives the two quantities:
-
 $$
-\mathrm{Recall} = p(B), \qquad \mathrm{Precision} = \pi_\theta(A)
+\mathrm{Recall} = p(B)
 $$
 
-$p(B)$ is the share of the target's mass that the model can reach at all, and $\pi_\theta(A)$ is the share of the model's mass that lands on the target. Then:
+$\pi_\theta(A)$ is the share of the student's own mass that lands on tokens the teacher can produce: of what the student generates, the fraction that is right. $p(B)$ is the share of the teacher's mass that falls on tokens the student can produce: of what the teacher generates, the fraction the student can reach at all.
+
+Take the task of picking a key entity from a chunk of text, where the teacher spreads probability over the entities it might name and the student generates an entity itself. Optimizing forward KL trains the student for coverage: the average runs over teacher draws, so the student learns to recall every entity the teacher might produce. Spread over all of them, it makes some false positives, entities the teacher would not name, but it drives down false negatives, teacher entities it cannot produce at all. Optimizing reverse KL trains the student for care: the average runs over the student's own draws, so it emits entities only where it is confident the teacher would agree. That drives down false positives, at the cost of false negatives, teacher entities it never attempts.
+
+Both maxima are the support statements from the two sections above:
 
 $$
 \boxed{\mathrm{Recall} = 1 \iff A \subseteq B}
-
 $$
 
 $$
@@ -126,7 +124,7 @@ $$
 $p(B) = 1$ exactly when $p$ assigns no mass outside $B$, i.e. when every token with $p(y) > 0$ has $\pi_\theta(y) > 0$, which is $A \subseteq B$. The precision statement is the same argument with the two distributions exchanged: $\pi_\theta(A) = 1$ exactly when the model assigns no mass outside $A$, which is $B \subseteq A$.
 </details>
 
-These are the same two inclusions as in the support box above, read in the other direction. Perfect recall is exactly the condition that no forward term is infinite, and perfect precision is exactly the condition that no reverse term is infinite. Forward KL is the recall direction: it is audited on target draws, so the expensive error is a miss. Reverse KL is the precision direction: it is audited on model draws, so the expensive error is a false production. A model that cannot match $p$ exactly is choosing which error to pay.
+$A \subseteq B$ is also the condition that forward KL is finite, and $B \subseteq A$ the condition that reverse KL is finite. Perfect recall is exactly the forward support condition and perfect precision the reverse one: forward KL is the recall direction, reverse KL the precision direction.
 
 ## Training Strategies
 
