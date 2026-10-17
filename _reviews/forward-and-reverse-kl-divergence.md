@@ -62,7 +62,12 @@ The first sum is the negative entropy of the model, which gives the boxed form.
 Both terms now depend on $\theta$; neither is a constant to discard. The expectation is under $\pi_\theta$ itself. If $\pi_\theta(y) \approx 0$, the term for $y$ is $\approx 0$ whatever $p(y)$ is, so dropping a mode of $p$ costs nothing directly. If $\pi_\theta(y) > 0$ where $p(y) = 0$, the term is infinite. The support constraint is exactly reversed:
 
 $$
-\boxed{D_{KL}(p\|\pi) < \infty \implies \mathrm{supp}\, p \subseteq \mathrm{supp}\, \pi, \qquad D_{KL}(\pi\|p) < \infty \implies \mathrm{supp}\, \pi \subseteq \mathrm{supp}\, p}
+\boxed{D_{KL}(p\|\pi) < \infty \implies \mathrm{supp}\, p \subseteq \mathrm{supp}\, \pi}
+
+$$
+
+$$
+\boxed{D_{KL}(\pi\|p) < \infty \implies \mathrm{supp}\, \pi \subseteq \mathrm{supp}\, p}
 $$
 
 Within the support of $p$, the average is weighted by what $\pi_\theta$ actually generates, so an imperfect $\pi_\theta$ does best by concentrating on the largest modes of $p$ and ignoring the rest. This is **mode-seeking**.
@@ -74,7 +79,12 @@ If $\pi_\theta$ can represent $p$ exactly, there is no disagreement: both diverg
 The same asymmetry is the precision/recall tradeoff, seen by scoring the model on sampled tokens. Sample tokens from the true distribution and ask how much probability the model gives them, or sample tokens from the model and ask how much probability the truth gives them. The expected log scores are:
 
 $$
-\boxed{\mathbb{E}_{y \sim p}[\log \pi_\theta(y)] = -H(p) - D_{KL}(p\|\pi_\theta), \qquad \mathbb{E}_{y \sim \pi_\theta}[\log p(y)] = -H(\pi_\theta) - D_{KL}(\pi_\theta\|p)}
+\boxed{\mathbb{E}_{y \sim p}[\log \pi_\theta(y)] = -H(p) - D_{KL}(p\|\pi_\theta)}
+
+$$
+
+$$
+\boxed{\mathbb{E}_{y \sim \pi_\theta}[\log p(y)] = -H(\pi_\theta) - D_{KL}(\pi_\theta\|p)}
 $$
 
 In the first identity $H(p)$ does not depend on $\theta$, so maximizing the expected log probability of tokens drawn from the true distribution is exactly minimizing forward KL. That is the soft form of recall: the audit runs over tokens the truth produces, and a true token the model rates near zero drags the average down without bound. The second identity is the precision side: reverse KL is the same kind of audit run over tokens the model produces, where a produced token the truth rates near zero is the expensive one, together with the model's own entropy term.
@@ -94,7 +104,12 @@ $$
 $p(B)$ is the share of the target's mass that the model can reach at all, and $\pi_\theta(A)$ is the share of the model's mass that lands on the target. Then:
 
 $$
-\boxed{\mathrm{Recall} = 1 \iff A \subseteq B, \qquad \mathrm{Precision} = 1 \iff B \subseteq A}
+\boxed{\mathrm{Recall} = 1 \iff A \subseteq B}
+
+$$
+
+$$
+\boxed{\mathrm{Precision} = 1 \iff B \subseteq A}
 $$
 
 <details><summary>Proof</summary>
@@ -134,7 +149,12 @@ $$
 Define the reward-tilted distribution:
 
 $$
-p^*(y) = \frac{\pi_{ref}(y) \exp(r(y)/\beta)}{Z}, \qquad Z = \sum_{y'} \pi_{ref}(y') \exp(r(y')/\beta)
+p^*(y) = \frac{\pi_{ref}(y) \exp(r(y)/\beta)}{Z}
+
+$$
+
+$$
+Z = \sum_{y'} \pi_{ref}(y') \exp(r(y')/\beta)
 $$
 
 $\pi_{ref}$ is not itself the target; together with $r$ it defines the tilted target. Then:
