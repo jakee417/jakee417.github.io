@@ -7,6 +7,9 @@ tags: [mathematics, ai-assisted]
 math: true
 mermaid: true
 markdown: kramdown
+image:
+  path: /assets/img/custom/entropy-venn.png
+  alt: Venn diagram of H(X) and H(Y), with the mutual information I(X;Y) in the overlap
 ---
 
 In [Entropy, Prefix Codes, and KL Divergence]({% link _posts/2026-10-01-entropy-prefix-codes-and-kl-divergence.md %}), a single random variable $X$ is described by a prefix code, and the optimal expected code word length is the entropy $H(X)$. With two variables, the same coding picture gives three more quantities. Describing the pair $(X, Y)$ costs the [joint entropy](https://en.wikipedia.org/wiki/Joint_entropy) $H(X, Y)$. If the receiver already knows $Y$, the remaining cost is the [conditional entropy](https://en.wikipedia.org/wiki/Conditional_entropy) $H(X \mid Y)$. The difference is the [mutual information](https://en.wikipedia.org/wiki/Mutual_information): the number of bits that knowing one variable saves in describing the other.
