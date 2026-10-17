@@ -9,7 +9,23 @@ mermaid: true
 markdown: kramdown
 ---
 
-In [Entropy, Prefix Codes, and KL Divergence]({% link _reviews/entropy-prefix-codes-and-kl-divergence.md %}), $D_{KL}(p\|q)$ is the expected excess cost of coding a $p$ sequence with a $q$ code, and it is asymmetric. The asymmetry is the subject here. Let $p$ be a target distribution over responses $y$ and $\pi_\theta$ a model. The first argument of $D_{KL}$ is the distribution the expectation is taken under, so swapping the arguments changes what an imperfect $\pi_\theta$ is forced to do. This post condenses the argument of Jon Vet's [Forward and Reverse KL Divergence](https://www.jonvet.com/blog/forward-and-reverse-kl-divergence), following Hao (2026).[^nats]
+In [Entropy, Prefix Codes, and KL Divergence]({% link _reviews/entropy-prefix-codes-and-kl-divergence.md %}), $D_{KL}(p\|q)$ is the expected excess cost of coding a $p$ sequence with a $q$ code, and it is asymmetric. The asymmetry is the subject here. Let $p$ be a target distribution over responses $y$ and $\pi_\theta$ a model. The first argument of $D_{KL}$ is the distribution the expectation is taken under, so swapping the arguments changes what an imperfect $\pi_\theta$ is forced to do. Written out, each sum runs only over the support of its first argument:
+
+$$
+\begin{aligned}
+D_{KL}(p\|\pi_\theta) &= \mathbb{E}_{y \sim p}\left[\log \frac{p(y)}{\pi_\theta(y)}\right] \\
+&= \sum_{y \in \mathrm{supp}\, p} p(y) \log \frac{p(y)}{\pi_\theta(y)}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+D_{KL}(\pi_\theta\|p) &= \mathbb{E}_{y \sim \pi_\theta}\left[\log \frac{\pi_\theta(y)}{p(y)}\right] \\
+&= \sum_{y \in \mathrm{supp}\, \pi_\theta} \pi_\theta(y) \log \frac{\pi_\theta(y)}{p(y)}
+\end{aligned}
+$$
+
+A term weighted by $p(y) = 0$ contributes nothing to the first sum, and a term weighted by $\pi_\theta(y) = 0$ nothing to the second, so neither divergence sees anything outside its first argument's support. This post condenses the argument of Jon Vet's [Forward and Reverse KL Divergence](https://www.jonvet.com/blog/forward-and-reverse-kl-divergence), following Hao (2026).[^nats]
 
 [^nats]: Logs are natural in the post-training literature. Nothing below depends on the base.
 
