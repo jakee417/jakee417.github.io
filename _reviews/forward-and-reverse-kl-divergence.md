@@ -108,7 +108,8 @@ $$
 
 $\pi_\theta(A)$ is the share of the student's mass on tokens the teacher can produce: of what the student generates, the fraction that is right. $p(B)$ is the share of the teacher's mass on tokens the student can produce: of what the teacher generates, the fraction the student can reach.
 
-Take the task of picking a key entity from a chunk of text: the teacher spreads probability over the entities it might name, and the student generates one itself. Forward KL trains for coverage: the average runs over teacher draws, so the student learns to recall every entity the teacher might produce. Spread over all of them, it makes some false positives, but drives down false negatives, teacher entities it cannot produce at all. Reverse KL trains for care: the average runs over the student's own draws, so it emits only entities it is confident the teacher would agree on. That drives down false positives, at the cost of false negatives it never attempts.
+> Take the task of picking a key entity from a chunk of text: the teacher spreads probability over the entities it might name, and the student generates one itself. Forward KL trains for coverage: the average runs over teacher draws, so the student learns to recall every entity the teacher might produce. Spread over all of them, it makes some false positives, but drives down false negatives, teacher entities it cannot produce at all. Reverse KL trains for care: the average runs over the student's own draws, so it emits only entities it is confident the teacher would agree on. That drives down false positives, at the cost of false negatives it never attempts.
+{: .prompt-info }
 
 Both maxima are the support statements from the two sections above:
 
