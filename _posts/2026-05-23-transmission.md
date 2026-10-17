@@ -6,6 +6,9 @@ categories: [Math]
 tags: [mathematics, radios, optimization]
 math: true
 mermaid: false
+image:
+  path: /assets/img/custom/gain-comparison.png
+  alt: Antenna radiation patterns by gain, from the circular isotropic pattern to focused 3 dB, 6 dB, and 9 dB ellipses
 ---
 
 ## Link Budget
