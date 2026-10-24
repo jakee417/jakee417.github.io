@@ -96,9 +96,9 @@ $$
 \mathrm{Recall} = \frac{|A \cap B|}{|A|}
 $$
 
-Let's assume we are using [nucleus sampling](https://en.wikipedia.org/wiki/Top-p_sampling) with high temperature and top-p and tokens are sampled from the raw probability distributions.
+Let's assume we are using [nucleus sampling](https://en.wikipedia.org/wiki/Top-p_sampling) with high temperature/top-p and tokens are sampled from the raw probability distributions.
 
-> Take the information retrieval task of picking key entities from a chunk of text. Our goal is to modify the student to maximize the average overlap over many such generations. If we optimized for forward KL, we'd find that student generations broadly cover teacher generations (recall). Student generations would generate *fewer false negatives but with more false positives*. If we instead optimized for reverse KL, the student would become more careful, only generating tokens it's confident the teacher also generates (precision). We'd see *fewer false positives, but more false negatives*.
+> Take the information retrieval task of picking key entities from a chunk of text. Our goal is to optimize the student to maximize the average overlap over many such generations. If we optimized for forward KL, we'd find that student generations broadly cover teacher generations (recall). Student generations would generate *fewer false negatives but with more false positives*. If we instead optimized for reverse KL, the student would become more careful, only generating tokens it's confident the teacher also generates (precision). We'd see *fewer false positives, but more false negatives*.
 {: .prompt-info }
 
 Maxima are achieved at the same two inclusions from when KL divergence is finite:
