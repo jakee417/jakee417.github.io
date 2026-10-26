@@ -45,6 +45,9 @@ jobs:
           ruby-version: 3.3
           bundler-cache: true
 
+      - name: Fetch authorship notes
+        run: git fetch origin +refs/notes/ai-authorship:refs/notes/ai-authorship
+
       - name: Compute authorship data
         run: python3 tools/authorship.py
 

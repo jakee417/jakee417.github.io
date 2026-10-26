@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 # authorship.py -- compute per-post AI authorship from git blame.
 #
-# Convention (see AGENTS.md / tools/ai-commits.txt): a commit whose
-# text was AI-generated carries the trailer
-# "Co-authored-by: Muse <noreply@muse.ai>" in its message -- the
-# standard git trailer GitHub renders as a co-author. Commits
-# from before the convention are listed by full hash in
-# tools/ai-commits.txt. The tag follows who wrote the words, not who
-# ran git commit.
+# Convention (see AGENTS.md): a commit whose text was AI-generated
+# carries the trailer "Co-authored-by: Muse <noreply@muse.ai>" in
+# its message -- the standard git trailer GitHub renders as a
+# co-author. Commits from before the convention instead carry a git
+# note in the dedicated ref refs/notes/ai-authorship (body:
+# "ai-authored: <which AI>"); notes annotate a commit without
+# rewriting it. The tag follows who wrote the words, not who ran
+# git commit.
 #
 # For every post (_posts/*.md, _drafts/*.md) this runs a line-level,
 # rename-aware git blame on the post file itself (never on any file
@@ -27,19 +28,24 @@ def git(*args):
     return subprocess.run(["git", "-C", ROOT] + list(args),
                           capture_output=True, text=True, check=True).stdout
 
-backfill = set()
-bf_path = os.path.join(ROOT, "tools", "ai-commits.txt")
-if os.path.exists(bf_path):
-    for ln in open(bf_path, encoding="utf-8"):
-        ln = ln.split("#")[0].strip()
-        if re.fullmatch(r"[0-9a-f]{40}", ln):
-            backfill.add(ln)
+# Commits annotated in the ai-authorship notes ref. The ref is not
+# part of a default clone: fetch it first with
+#   git fetch origin +refs/notes/ai-authorship:refs/notes/ai-authorship
+# (the deploy workflow does). Missing notes only ever undercount.
+noted = set()
+_r = subprocess.run(["git", "-C", ROOT, "notes", "--ref", "ai-authorship", "list"],
+                    capture_output=True, text=True)
+if _r.returncode == 0:
+    for _ln in _r.stdout.splitlines():
+        _parts = _ln.split()
+        if len(_parts) == 2:
+            noted.add(_parts[1])
 
 _trailers = {}
 CO_AUTHOR = re.compile(r"^Co-authored-by:\s*(.+)$", re.M | re.I)
 
 def is_ai(full_hash):
-    if full_hash in backfill:
+    if full_hash in noted:
         return True
     if full_hash not in _trailers:
         _trailers[full_hash] = git("log", "-1", "--format=%(trailers)", full_hash)
