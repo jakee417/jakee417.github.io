@@ -2,7 +2,7 @@
 #
 # Auto-tag AI-assisted posts
 #
-# Any post or review draft whose computed AI authorship is greater
+# Any post (drafts included when rendered) whose computed AI authorship is greater
 # than zero gets the `ai-assisted` tag at build time, so the tag
 # never has to be maintained by hand in front matter. Authorship
 # data comes from _data/authorship.json (written by
@@ -20,8 +20,6 @@ class AuthorshipTagger < Jekyll::Generator
 
     data = JSON.parse(File.read(path))
     docs = site.posts.docs
-    reviews = site.collections["reviews"]
-    docs += reviews.docs if reviews
 
     docs.each do |doc|
       entry = data[doc.relative_path]

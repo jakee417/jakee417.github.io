@@ -9,7 +9,7 @@
 # tools/ai-commits.txt. The tag follows who wrote the words, not who
 # ran git commit.
 #
-# For every post (_posts/*.md, _reviews/*.md) this runs a line-level,
+# For every post (_posts/*.md, _drafts/*.md) this runs a line-level,
 # rename-aware git blame on the post file itself (never on any file
 # it includes) and writes _data/authorship.json keyed by the post's
 # repo-relative path (page.path in Liquid):
@@ -62,7 +62,7 @@ def authorship(post_path):
 
 def main():
     data = {}
-    for pattern in ("_posts/*.md", "_reviews/*.md"):
+    for pattern in ("_posts/*.md", "_drafts/*.md"):
         for path in sorted(glob.glob(os.path.join(ROOT, pattern))):
             rel = os.path.relpath(path, ROOT)
             entry = authorship(rel)

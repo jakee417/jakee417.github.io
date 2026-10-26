@@ -1,4 +1,16 @@
 {
+ "_drafts/perplexity.md": {
+  "ai_lines": 132,
+  "file": "_drafts/perplexity.md",
+  "pct": 100,
+  "total_lines": 132
+ },
+ "_drafts/when-is-the-paired-t-test-uniformly-more-powerful.md": {
+  "ai_lines": 287,
+  "file": "_drafts/when-is-the-paired-t-test-uniformly-more-powerful.md",
+  "pct": 100,
+  "total_lines": 287
+ },
  "_posts/2022-05-10-flux-ml-diffusion-mnist.md": {
   "ai_lines": 0,
   "file": "_posts/2022-05-10-flux-ml-diffusion-mnist.md",
@@ -430,17 +442,5 @@
   "file": "_posts/2026-10-15-forward-and-reverse-kl-divergence.md",
   "pct": 99,
   "total_lines": 212
- },
- "_reviews/perplexity.md": {
-  "ai_lines": 132,
-  "file": "_reviews/perplexity.md",
-  "pct": 100,
-  "total_lines": 132
- },
- "_reviews/when-is-the-paired-t-test-uniformly-more-powerful.md": {
-  "ai_lines": 287,
-  "file": "_reviews/when-is-the-paired-t-test-uniformly-more-powerful.md",
-  "pct": 100,
-  "total_lines": 287
  }
 }
