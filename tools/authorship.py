@@ -10,9 +10,8 @@
 # ran git commit.
 #
 # For every post (_posts/*.md, _reviews/*.md) this runs a line-level,
-# rename-aware git blame on the file that holds the words -- the post
-# file itself, or its {% include markdown/... %} target when the post
-# is a stub -- and writes _data/authorship.json keyed by the post's
+# rename-aware git blame on the post file itself (never on any file
+# it includes) and writes _data/authorship.json keyed by the post's
 # repo-relative path (page.path in Liquid):
 #
 #   {"_posts/2026-....md": {"pct": 99, "ai_lines": 210,
@@ -47,21 +46,8 @@ def is_ai(full_hash):
     return any(ai in m.lower() for m in CO_AUTHOR.findall(_trailers[full_hash])
                for ai in ("muse", "claude", "gemini"))
 
-INCLUDE = re.compile(r"\{%\s*include\s+markdown/([^\s%}]+)")
-
-def blame_target(post_path):
-    with open(os.path.join(ROOT, post_path), encoding="utf-8") as fh:
-        m = INCLUDE.search(fh.read())
-    if m:
-        target = "_includes/markdown/" + m.group(1)
-        # Only follow the include when it names a real file: some
-        # posts quote the include syntax itself as an example.
-        if os.path.exists(os.path.join(ROOT, target)):
-            return target
-    return post_path
-
 def authorship(post_path):
-    target = blame_target(post_path)
+    target = post_path
     try:
         out = git("blame", "--porcelain", "-C", "-M", "HEAD", "--", target)
     except subprocess.CalledProcessError:
