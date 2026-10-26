@@ -1,0 +1,446 @@
+{
+ "_posts/2022-05-10-flux-ml-diffusion-mnist.md": {
+  "ai_lines": 0,
+  "file": "_posts/2022-05-10-flux-ml-diffusion-mnist.md",
+  "pct": 0,
+  "total_lines": 74
+ },
+ "_posts/2022-11-15-pre-drawing-pieces.md": {
+  "ai_lines": 0,
+  "file": "_posts/2022-11-15-pre-drawing-pieces.md",
+  "pct": 0,
+  "total_lines": 58
+ },
+ "_posts/2023-01-04-interval-detector.md": {
+  "ai_lines": 0,
+  "file": "_posts/2023-01-04-interval-detector.md",
+  "pct": 0,
+  "total_lines": 288
+ },
+ "_posts/2023-06-16-my-ios-development_journey.md": {
+  "ai_lines": 0,
+  "file": "_posts/2023-06-16-my-ios-development_journey.md",
+  "pct": 0,
+  "total_lines": 444
+ },
+ "_posts/2023-12-13-model-uncertainty.md": {
+  "ai_lines": 0,
+  "file": "_posts/2023-12-13-model-uncertainty.md",
+  "pct": 0,
+  "total_lines": 172
+ },
+ "_posts/2024-02-04-least-action-least-squares.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-02-04-least-action-least-squares.md",
+  "pct": 0,
+  "total_lines": 304
+ },
+ "_posts/2024-02-13-hamiltonian-mechanics.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-02-13-hamiltonian-mechanics.md",
+  "pct": 0,
+  "total_lines": 316
+ },
+ "_posts/2024-02-14-ising-model_theory.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-02-14-ising-model_theory.md",
+  "pct": 0,
+  "total_lines": 277
+ },
+ "_posts/2024-02-19-ising-model-computation.md": {
+  "ai_lines": 0,
+  "file": "_includes/markdown/ising_model.md",
+  "pct": 0,
+  "total_lines": 495
+ },
+ "_posts/2024-02-23-raspberry-pi-pico.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-02-23-raspberry-pi-pico.md",
+  "pct": 0,
+  "total_lines": 694
+ },
+ "_posts/2024-03-04-ising-model-speed.md": {
+  "ai_lines": 0,
+  "file": "_includes/markdown/ising_model_speed.md",
+  "pct": 0,
+  "total_lines": 387
+ },
+ "_posts/2024-03-09-buy-vs-rent.md": {
+  "ai_lines": 0,
+  "file": "_includes/markdown/rent_vs_buy_blog_post.md",
+  "pct": 0,
+  "total_lines": 1449
+ },
+ "_posts/2024-03-23-coin-problem.md": {
+  "ai_lines": 0,
+  "file": "_includes/markdown/coin_problem.md",
+  "pct": 0,
+  "total_lines": 402
+ },
+ "_posts/2024-04-15-ugm-tabular.md": {
+  "ai_lines": 0,
+  "file": "_includes/markdown/tabular.md",
+  "pct": 0,
+  "total_lines": 647
+ },
+ "_posts/2024-04-18-learning-undirected.md": {
+  "ai_lines": 0,
+  "file": "_includes/markdown/pgmpy.md",
+  "pct": 0,
+  "total_lines": 466
+ },
+ "_posts/2024-05-01-theoretical-minimum-1-1.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-01-theoretical-minimum-1-1.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-05-01-theoretical-minimum-1-10.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-01-theoretical-minimum-1-10.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-05-01-theoretical-minimum-1-11.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-01-theoretical-minimum-1-11.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-05-01-theoretical-minimum-1-2.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-01-theoretical-minimum-1-2.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-05-01-theoretical-minimum-1-3.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-01-theoretical-minimum-1-3.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-05-01-theoretical-minimum-1-4.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-01-theoretical-minimum-1-4.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-05-01-theoretical-minimum-1-5.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-01-theoretical-minimum-1-5.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-05-01-theoretical-minimum-1-6.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-01-theoretical-minimum-1-6.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-05-01-theoretical-minimum-1-7.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-01-theoretical-minimum-1-7.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-05-01-theoretical-minimum-1-8.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-01-theoretical-minimum-1-8.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-05-01-theoretical-minimum-1-9.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-01-theoretical-minimum-1-9.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-05-30-theoretical-minimum-2-1.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-30-theoretical-minimum-2-1.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-05-30-theoretical-minimum-2-10.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-30-theoretical-minimum-2-10.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-05-30-theoretical-minimum-2-11.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-30-theoretical-minimum-2-11.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-05-30-theoretical-minimum-2-2.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-30-theoretical-minimum-2-2.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-05-30-theoretical-minimum-2-3.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-30-theoretical-minimum-2-3.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-05-30-theoretical-minimum-2-4.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-30-theoretical-minimum-2-4.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-05-30-theoretical-minimum-2-5.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-30-theoretical-minimum-2-5.md",
+  "pct": 0,
+  "total_lines": 20
+ },
+ "_posts/2024-05-30-theoretical-minimum-2-6.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-30-theoretical-minimum-2-6.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-05-30-theoretical-minimum-2-7.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-30-theoretical-minimum-2-7.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-05-30-theoretical-minimum-2-8.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-30-theoretical-minimum-2-8.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-05-30-theoretical-minimum-2-9.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-05-30-theoretical-minimum-2-9.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2024-06-14-distances-part-1.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-06-14-distances-part-1.md",
+  "pct": 0,
+  "total_lines": 79
+ },
+ "_posts/2024-06-14-distances-part-2.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-06-14-distances-part-2.md",
+  "pct": 0,
+  "total_lines": 127
+ },
+ "_posts/2024-06-14-distances-part-3.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-06-14-distances-part-3.md",
+  "pct": 0,
+  "total_lines": 202
+ },
+ "_posts/2024-08-03-flutter-rent-vs-buy.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-08-03-flutter-rent-vs-buy.md",
+  "pct": 0,
+  "total_lines": 24
+ },
+ "_posts/2024-08-10-bayes-opt.md": {
+  "ai_lines": 0,
+  "file": "_includes/markdown/bayesian_opt.md",
+  "pct": 0,
+  "total_lines": 757
+ },
+ "_posts/2024-08-21-botorch.md": {
+  "ai_lines": 0,
+  "file": "_includes/markdown/botorch.md",
+  "pct": 0,
+  "total_lines": 745
+ },
+ "_posts/2024-08-21-matrix-inverse.md": {
+  "ai_lines": 0,
+  "file": "_includes/markdown/torch_inv.md",
+  "pct": 0,
+  "total_lines": 327
+ },
+ "_posts/2024-09-14-transformer-graph.md": {
+  "ai_lines": 0,
+  "file": "_includes/markdown/attention_graph.md",
+  "pct": 0,
+  "total_lines": 189
+ },
+ "_posts/2024-09-28-bradley-terry.md": {
+  "ai_lines": 0,
+  "file": "_includes/markdown/bradley_terry.md",
+  "pct": 0,
+  "total_lines": 784
+ },
+ "_posts/2024-10-29-score-functions.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-10-29-score-functions.md",
+  "pct": 0,
+  "total_lines": 371
+ },
+ "_posts/2024-12-19-time-dilation.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-12-19-time-dilation.md",
+  "pct": 0,
+  "total_lines": 85
+ },
+ "_posts/2024-12-26-length-contraction.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-12-26-length-contraction.md",
+  "pct": 0,
+  "total_lines": 27
+ },
+ "_posts/2024-12-31-einstein-example.md": {
+  "ai_lines": 0,
+  "file": "_posts/2024-12-31-einstein-example.md",
+  "pct": 0,
+  "total_lines": 150
+ },
+ "_posts/2025-01-08-xiangqi.md": {
+  "ai_lines": 0,
+  "file": "_posts/2025-01-08-xiangqi.md",
+  "pct": 0,
+  "total_lines": 47
+ },
+ "_posts/2025-01-24-monte-carlo-tree-search.md": {
+  "ai_lines": 0,
+  "file": "_posts/2025-01-24-monte-carlo-tree-search.md",
+  "pct": 0,
+  "total_lines": 116
+ },
+ "_posts/2025-03-16-markov-inequality.md": {
+  "ai_lines": 0,
+  "file": "_posts/2025-03-16-markov-inequality.md",
+  "pct": 0,
+  "total_lines": 43
+ },
+ "_posts/2025-03-21-blogging-code-snippets.md": {
+  "ai_lines": 0,
+  "file": "_posts/2025-03-21-blogging-code-snippets.md",
+  "pct": 0,
+  "total_lines": 101
+ },
+ "_posts/2025-03-28-harmonic-oscillators.md": {
+  "ai_lines": 0,
+  "file": "_posts/2025-03-28-harmonic-oscillators.md",
+  "pct": 0,
+  "total_lines": 216
+ },
+ "_posts/2025-03-31-harmonic-oscillators-2.md": {
+  "ai_lines": 0,
+  "file": "_posts/2025-03-31-harmonic-oscillators-2.md",
+  "pct": 0,
+  "total_lines": 345
+ },
+ "_posts/2025-04-25-theoretical-minimum-3-1.md": {
+  "ai_lines": 0,
+  "file": "_posts/2025-04-25-theoretical-minimum-3-1.md",
+  "pct": 0,
+  "total_lines": 19
+ },
+ "_posts/2025-04-25-theoretical-minimum-3-2.md": {
+  "ai_lines": 0,
+  "file": "_posts/2025-04-25-theoretical-minimum-3-2.md",
+  "pct": 0,
+  "total_lines": 20
+ },
+ "_posts/2025-04-25-theoretical-minimum-3-3.md": {
+  "ai_lines": 0,
+  "file": "_posts/2025-04-25-theoretical-minimum-3-3.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2025-04-25-theoretical-minimum-3-4.md": {
+  "ai_lines": 0,
+  "file": "_posts/2025-04-25-theoretical-minimum-3-4.md",
+  "pct": 0,
+  "total_lines": 17
+ },
+ "_posts/2025-04-25-theoretical-minimum-3-5.md": {
+  "ai_lines": 0,
+  "file": "_posts/2025-04-25-theoretical-minimum-3-5.md",
+  "pct": 0,
+  "total_lines": 20
+ },
+ "_posts/2025-04-25-theoretical-minimum-3-6.md": {
+  "ai_lines": 0,
+  "file": "_posts/2025-04-25-theoretical-minimum-3-6.md",
+  "pct": 0,
+  "total_lines": 19
+ },
+ "_posts/2025-05-31-b4-l5-ex-1.md": {
+  "ai_lines": 0,
+  "file": "_posts/2025-05-31-b4-l5-ex-1.md",
+  "pct": 0,
+  "total_lines": 187
+ },
+ "_posts/2025-08-08-relativistic-velocities.md": {
+  "ai_lines": 0,
+  "file": "_posts/2025-08-08-relativistic-velocities.md",
+  "pct": 0,
+  "total_lines": 184
+ },
+ "_posts/2025-09-21-foggy-grouse.md": {
+  "ai_lines": 0,
+  "file": "_posts/2025-09-21-foggy-grouse.md",
+  "pct": 0,
+  "total_lines": 51
+ },
+ "_posts/2025-11-27-personal-essay.md": {
+  "ai_lines": 0,
+  "file": "_posts/2025-11-27-personal-essay.md",
+  "pct": 0,
+  "total_lines": 38
+ },
+ "_posts/2026-01-26-diffusion-language-models.md": {
+  "ai_lines": 0,
+  "file": "_includes/markdown/dllms.md",
+  "pct": 0,
+  "total_lines": 403
+ },
+ "_posts/2026-02-14-natural-gradient-descent.md": {
+  "ai_lines": 479,
+  "file": "_includes/markdown/natural_gradient_descent.md",
+  "pct": 100,
+  "total_lines": 479
+ },
+ "_posts/2026-05-23-transmission.md": {
+  "ai_lines": 3,
+  "file": "_posts/2026-05-23-transmission.md",
+  "pct": 3,
+  "total_lines": 118
+ },
+ "_posts/2026-10-01-entropy-prefix-codes-and-kl-divergence.md": {
+  "ai_lines": 88,
+  "file": "_posts/2026-10-01-entropy-prefix-codes-and-kl-divergence.md",
+  "pct": 100,
+  "total_lines": 88
+ },
+ "_posts/2026-10-04-joint-entropy-conditional-entropy-and-mutual-information.md": {
+  "ai_lines": 143,
+  "file": "_posts/2026-10-04-joint-entropy-conditional-entropy-and-mutual-information.md",
+  "pct": 100,
+  "total_lines": 143
+ },
+ "_posts/2026-10-15-forward-and-reverse-kl-divergence.md": {
+  "ai_lines": 210,
+  "file": "_posts/2026-10-15-forward-and-reverse-kl-divergence.md",
+  "pct": 99,
+  "total_lines": 212
+ },
+ "_reviews/perplexity.md": {
+  "ai_lines": 132,
+  "file": "_reviews/perplexity.md",
+  "pct": 100,
+  "total_lines": 132
+ },
+ "_reviews/when-is-the-paired-t-test-uniformly-more-powerful.md": {
+  "ai_lines": 287,
+  "file": "_reviews/when-is-the-paired-t-test-uniformly-more-powerful.md",
+  "pct": 100,
+  "total_lines": 287
+ }
+}
