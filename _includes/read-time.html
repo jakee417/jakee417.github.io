@@ -21,7 +21,7 @@
      commits (tools/authorship.py writes _data/authorship.json).
      Shown inside this tooltip, after the word count; the read time
      itself links to the GitHub blame view of the post file. -->
-{% assign auth = site.data.authorship[page.path] %}
+{% assign auth = site.data.authorship[page.relative_path] | default: site.data.authorship[page.path] %}
 {% assign show_auth = false %}
 {% if auth %}
   {% if auth.pct > 0 or page.tags contains 'ai-assisted' %}
