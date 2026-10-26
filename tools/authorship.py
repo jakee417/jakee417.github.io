@@ -4,11 +4,11 @@
 # Convention (see AGENTS.md): a commit whose text was AI-generated
 # carries the trailer "Co-authored-by: Muse <noreply@muse.ai>" in
 # its message -- the standard git trailer GitHub renders as a
-# co-author. Commits from before the convention instead carry a git
-# note in the dedicated ref refs/notes/ai-authorship (body:
-# "ai-authored: <which AI>"); notes annotate a commit without
-# rewriting it. The tag follows who wrote the words, not who ran
-# git commit.
+# co-author. Commits from before the convention were backfilled on
+# 2026-10-26 by a message-only history rewrite (git filter-repo)
+# that appended the same trailer to their messages, so this trailer
+# check is the only test. The tag follows who wrote the words, not
+# who ran git commit.
 #
 # For every post (_posts/*.md, _drafts/*.md) this runs a line-level,
 # rename-aware git blame on the post file itself (never on any file
@@ -28,25 +28,10 @@ def git(*args):
     return subprocess.run(["git", "-C", ROOT] + list(args),
                           capture_output=True, text=True, check=True).stdout
 
-# Commits annotated in the ai-authorship notes ref. The ref is not
-# part of a default clone: fetch it first with
-#   git fetch origin +refs/notes/ai-authorship:refs/notes/ai-authorship
-# (the deploy workflow does). Missing notes only ever undercount.
-noted = set()
-_r = subprocess.run(["git", "-C", ROOT, "notes", "--ref", "ai-authorship", "list"],
-                    capture_output=True, text=True)
-if _r.returncode == 0:
-    for _ln in _r.stdout.splitlines():
-        _parts = _ln.split()
-        if len(_parts) == 2:
-            noted.add(_parts[1])
-
 _trailers = {}
 CO_AUTHOR = re.compile(r"^Co-authored-by:\s*(.+)$", re.M | re.I)
 
 def is_ai(full_hash):
-    if full_hash in noted:
-        return True
     if full_hash not in _trailers:
         _trailers[full_hash] = git("log", "-1", "--format=%(trailers)", full_hash)
     return any(ai in m.lower() for m in CO_AUTHOR.findall(_trailers[full_hash])
