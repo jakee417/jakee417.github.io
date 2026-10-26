@@ -3,7 +3,7 @@ title: Perplexity
 author: jake
 date: 2026-10-21 23:07:00 -0700
 categories: [Math]
-tags: [mathematics, ai-assisted]
+tags: [mathematics]
 math: true
 mermaid: true
 markdown: kramdown

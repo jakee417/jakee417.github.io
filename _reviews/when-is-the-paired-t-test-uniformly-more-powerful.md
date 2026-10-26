@@ -3,7 +3,7 @@ title: "When Is the Paired t-Test Uniformly More Powerful?"
 author: jake
 date: 2026-10-25 17:09:00 -0700
 categories: [Math]
-tags: [statistics, ai-assisted]
+tags: [statistics]
 math: true
 mermaid: true
 markdown: kramdown
