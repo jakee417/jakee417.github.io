@@ -94,23 +94,6 @@ script_includes:
           <!-- read time -->
           {% include read-time.html content=content prompt=true lang=lang %}
 
-          <!-- authorship: % of lines blamed to AI-tagged commits
-               (tools/authorship.py writes _data/authorship.json) -->
-          {% assign auth = site.data.authorship[page.path] %}
-          {% if auth %}
-            {% if auth.pct > 0 or page.tags contains 'ai-assisted' %}
-              <span class="authorship">
-                &middot;
-                <a
-                  href="https://github.com/jakee417/jakee417.github.io/blame/master/{{ auth.file }}"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  {{- auth.pct }}% AI-authored</a
-                >
-              </span>
-            {% endif %}
-          {% endif %}
         </div>
       </div>
     </div>

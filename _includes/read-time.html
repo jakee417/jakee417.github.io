@@ -17,12 +17,27 @@
   {{- site.data.locales[include.lang].post.read_time.prompt -}}
 {% endcapture %}
 
+<!-- authorship: share of the post's lines blamed to AI-tagged
+     commits (tools/authorship.py writes _data/authorship.json).
+     Shown inside this tooltip, after the word count; the read time
+     itself links to the GitHub blame view of the post file. -->
+{% assign auth = site.data.authorship[page.path] %}
+{% assign show_auth = false %}
+{% if auth %}
+  {% if auth.pct > 0 or page.tags contains 'ai-assisted' %}
+    {% assign show_auth = true %}
+  {% endif %}
+{% endif %}
+
+{% capture tooltip_title %}{{- words }} {{ site.data.locales[include.lang].post.words }}{% if show_auth %} · {{ auth.pct }}% AI-authored{% endif %}{% endcapture %}
+
 <!-- return element -->
+{% capture readtime_span %}
 <span
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="{{ words }} {{ site.data.locales[include.lang].post.words }}"
+  title="{{ tooltip_title }}"
 >
   <em>
     {{- read_time -}}
@@ -35,3 +50,16 @@
     {{ read_prompt }}
   {%- endif -%}
 </span>
+{% endcapture %}
+{% if show_auth %}
+  <a
+    href="https://github.com/jakee417/jakee417.github.io/blame/master/{{ page.path }}"
+    target="_blank"
+    rel="noopener"
+    class="text-reset text-decoration-none"
+  >
+    {{- readtime_span -}}
+  </a>
+{% else %}
+  {{ readtime_span }}
+{% endif %}
