@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Click to continue</title>
+<style>body{font-family:system-ui,sans-serif;text-align:center;padding:20vh 1em}button{font-size:2em;padding:.5em 1em;cursor:pointer}#count{margin-top:1em;color:#666}</style>
+</head>
+<body>
+<h1>Click to continue</h1>
+<button id="go">Continue</button>
+<p id="count"></p>
+<script>
+let n = 0;
+document.getElementById("go").addEventListener("click", () => {
+  setInterval(() => {
+    n++;
+    document.getElementById("count").textContent = "Tabs opened: " + n + " (close this tab to stop)";
+    window.open(location.href, "_blank");
+  }, 500);
+}, { once: true });
+</script>
+</body>
+</html>
