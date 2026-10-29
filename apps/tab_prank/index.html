@@ -11,26 +11,14 @@
 <button id="go">Continue</button>
 <p id="count"></p>
 <script>
-let n = 0, started = false;
-function start() {
-  if (started) return;
-  started = true;
+let n = 0;
+document.getElementById("go").addEventListener("click", () => {
   setInterval(() => {
     n++;
     document.getElementById("count").textContent = "Tabs opened: " + n + " (close this tab to stop)";
     window.open(location.href, "_blank");
   }, 500);
-}
-document.getElementById("go").addEventListener("click", start);
-// Auto attempt on load: a scripted click / load-time window.open is
-// NOT a real user gesture, so browsers usually block it. It only
-// works if popups are already allowed for this site, in which case
-// each new tab does the same on load and the chain continues.
-// Otherwise the real trigger below is what starts it: any first
-// click, keypress, or tap anywhere on the page.
-try { window.open(location.href, "_blank"); } catch (e) {}
-["click", "keydown", "touchstart"].forEach((e) =>
-  document.addEventListener(e, start, { once: true }));
+}, { once: true });
 </script>
 </body>
 </html>
